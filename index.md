@@ -1,8 +1,7 @@
 ## Location
-> Browse [Coram Ranch Site](https://www.coramranch.com/) to learn about reunion location and surrounding community. 
-- [Video Tour](https://youtu.be/kX24Zv1CJZA)
-- [Google Maps 14251 Coram Rd, Shasta Lake, California 96089](https://www.google.com/maps/place/14251+Coram+Rd,+Shasta+Lake,+CA+96019/@40.707988,-122.44701,16z/data=!4m5!3m4!1s0x54d28be161c895ef:0xca3b8805b9b6a5ec!8m2!3d40.7079882!4d-122.4470104?hl=en)
-- ***NO PETS***
+> Browse [The 25 Best Things to Do in Dubai](https://www.cntraveler.com/gallery/best-things-to-do-in-dubai) to learn about some of the most popular and historically essential parts of Dubai. 
+- [Virtual Tour](https://www.airpano.com/360photo/uae-dubai-city-virtual-tour/)
+- [Google Maps Dubai, United Arab Emirates](https://www.google.com/maps/place/Dubai+-+United+Arab+Emirates/@25.0760224,55.2274879,10z/data=!3m1!4b1!4m5!3m4!1s0x3e5f43496ad9c645:0xbde66e5084295162!8m2!3d25.2048493!4d55.2707828)
 
 ## Schedule
 
