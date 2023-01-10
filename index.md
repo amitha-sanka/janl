@@ -7,7 +7,7 @@
 
 | Date | Day | Time | Event | Meet At | Coordinator |
 | --- | --- | --- | --- | --- | --- |
-| 6/26 | Monday | 3pm | Check in | Shasta Lakes | Frank and Judith |
+| 6/26 | Monday | 3pm | AquaAventure | Shasta Lakes | Frank and Judith |
 | --- | --- | 6pm | Dinner | Dining Room | Lisa |
 | --- | --- | 7pm | Leuck Greet | Dining Room | Frank and Judith |
 | 6/27 | Tuesday | 8am | Breakfast | Dining Room | Lisa |
