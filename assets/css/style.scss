@@ -1,7 +1,17 @@
-  $high-emph: #e40587; // text on the very top, submenu pages text color
-  $med-emph: #f4488a; // description of post
-  $low-emph: #f5879b; // dates on posts
-  $dark-grey : #fcd1de; // background
-  $overlay : #efe7de; // table background
-  $overlay-light: mix($dark-grey, white, 86%);
+---
+---
+
+@import "{{ site.theme }}";
+
+/* "row style" is flexible size and aligns pictures in center */
+.row {
+    align-items: center;
+    display: flex;
+  }
   
+  /* "column style" is one-third of the width with padding */
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
