@@ -11,7 +11,7 @@
 | 6/21/2035 | Thursday | 8pm | Arrive at 4 Seasons Hotel Dubai Jumeirah Beach | Hotel Lobby | Naja Fonseca |---|---| Praia Dubai Beach Restaurant & Lounge|
 | 6/22/2035 | Friday | 2pm | Camel Racing | Hotel Lobby | Amitha Sanka | The Green Room | Masha and The Bear | Star Grills Restaurant |
 | 6/23/2035 | Saturday | 11 pm | Dubai Mall | Hotel Lobby | Amitha Sanka | Guylian Belgian Chocolate Café | Zaatar w Zeit | Eataly|
-| 6/24/2035 | Sunday | 8am | Ziplining | Dining Room | Lisa |---|---|---|
-| 6/25/2035 | Monday | 10am | Greet Games | Field and Court | Johnner, Lora, Shay|---|---|---|
-| 6/26/2035 | Tuesday | 12pm | Make & Go Lunch | Dining Room | Lisa |---|---|---|
-| 6/27/2035 | Wednesday | 2pm | Bike/Hike | Bike Rack | Johnner and Lora |---|---|---|
+| 6/24/2035 | Sunday | 8am | Ziplining | Hotel Lobby | Lina Awad | Salt and Chillis | Puerto 99 | Pide Keyfi|
+| 6/25/2035 | Monday | 10am | Global Village | Hotel Lobby | Joselyn Anda | Sansation Arabian Ranches | Lowe | Amritsr Al Nahda |
+| 6/26/2035 | Tuesday | 12pm | Aquaventure | Hotel Lobby | Naja Fonseca  | The World Eatery |Kazoza | Food Marquet|
+| 6/27/2035 | Wednesday | 2pm | Dinner in the Sky | Hotel Lobby | Lina Awad |---|---|---|
