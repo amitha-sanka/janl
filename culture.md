@@ -1,5 +1,21 @@
+<<<<<<< HEAD:sports.md
 ## Sports
 > 
+=======
+## Culture
+> Group sports will occur each every morning.  Sports will be fun and competitive.  Winners will have Leuck bragging rights for years to come.  On site..
+
+- Swimming Pool
+- Fishing (Bring your own equipment, some provided by ranch)
+- Mountain biking (Bike on bikes, some provided by ranch)
+- Horseshoes
+- Basketball
+- Bocce ball 
+- Ping pong
+- Table soccer
+- Air hockey
+- Billiards
+>>>>>>> 5fade0e (links):culture.md
 
 ### Tuesday Morning
 > 

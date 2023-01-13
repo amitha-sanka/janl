@@ -1,7 +1,7 @@
-## Family Night
+## Our Backstory
 > Each evening family will meet.  Family nights are intended to build the Leuck family legacy.
 
-### Leuck Greet
+### How we met
 > Movie, Games, Popcorn.  As we slumber in from our travels, how about an unwinding night?
 - Start with Movie
 - Transition to games
@@ -29,9 +29,3 @@ Trivia, which one is Frank and Judith?  who are the others?
 - Frank and Judith love story
 - Encores and requests
 - Family prayer, 'Leuck style'
-
-### Wednesday Family Night
-
-### Thursday Family Night
-
-### Friday Family Night
