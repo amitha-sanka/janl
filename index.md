@@ -7,10 +7,10 @@
 
 | Date | Day | Time | Event | Meet At | Coordinator | Breakfast | Lunch | Dinner |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 6/21 | Monday | 3pm | AquaAventure | Shasta Lakes | Frank and Judith |---|---|---|
-| 6/22 | --- | 6pm | Dinner | Dining Room | Lisa |---|---|---|
-| 6/23 | --- | 7pm | Leuck Greet | Dining Room | Frank and Judith |---|---|---|
-| 6/24 | Tuesday | 8am | Breakfast | Dining Room | Lisa |---|---|---|
-| 6/25 | --- | 10am | Greet Games | Field and Court | Johnner, Lora, Shay|---|---|---|
-| 6/26 | --- | 12pm | Make & Go Lunch | Dining Room | Lisa |---|---|---|
-| 6/27 | --- | 2pm | Bike/Hike | Bike Rack | Johnner and Lora |---|---|---|
+| 6/21/2035 | Thursday | 8pm | Arrive at 4 Seasons Hotel Dubai Jumeirah Beach | Hotel Lobby | Naja Fonseca |---|---| Praia Dubai Beach Restaurant & Lounge|
+| 6/22/2035 | Friday | 6pm | Dinner | Dining Room | Lisa |---|---|---|
+| 6/23/2035 | Saturday | 7pm | Leuck Greet | Dining Room | Frank and Judith |---|---|---|
+| 6/24/2035 | Sunday | 8am | Breakfast | Dining Room | Lisa |---|---|---|
+| 6/25/2035 | Monday | 10am | Greet Games | Field and Court | Johnner, Lora, Shay|---|---|---|
+| 6/26/2035 | Tuesday | 12pm | Make & Go Lunch | Dining Room | Lisa |---|---|---|
+| 6/27/2035 | Wednesday | 2pm | Bike/Hike | Bike Rack | Johnner and Lora |---|---|---|
