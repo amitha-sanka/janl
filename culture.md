@@ -1,7 +1,5 @@
-<<<<<<< HEAD:sports.md
 ## Sports
 > 
-=======
 ## Culture
 > Group sports will occur each every morning.  Sports will be fun and competitive.  Winners will have Leuck bragging rights for years to come.  On site..
 
@@ -15,7 +13,6 @@
 - Table soccer
 - Air hockey
 - Billiards
->>>>>>> 5fade0e (links):culture.md
 
 ### Tuesday Morning
 > 
