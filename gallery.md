@@ -4,7 +4,7 @@ Markdown Format takes entire column
 -->
 ![](images/Dad_Mom_2019.jpg)
 
-## Reunion/Multi-Family Pictures
+## Dubai Sites
 <div class="row"> <!--- make a new row -->
   <!-- each column is one-third of width -->
   <div class="column">
@@ -31,7 +31,7 @@ Markdown Format takes entire column
   </div>
 </div>
 
-## Mortensen Family
+## Team JANL
 <div class="row"> <!--- make a new row -->
   <!-- each column is one-third of width -->
   <div class="column">
@@ -71,7 +71,7 @@ Markdown Format takes entire column
   </div>
 </div>
 
-## Northrop Family
+## Gastronomy 
 <div class="row"> <!--- make a new row -->
   <!-- each column is one-third of width -->
   <div class="column">
@@ -85,7 +85,7 @@ Markdown Format takes entire column
   </div>
 </div>
 
-## Texas Leuck
+## Culture
 <div class="row"> <!--- make a new row -->
   <!-- each column is one-third of width -->
   <div class="column">
@@ -97,7 +97,7 @@ Markdown Format takes entire column
   </div>
 </div>
 
-## Schaffer Family
+## Local Life
 <div class="row"> <!--- make a new row -->
   <!-- each column is one-third of width -->
   <div class="column">
@@ -125,57 +125,3 @@ Markdown Format takes entire column
   </div>
 </div>
 
-## San Diego Leuck's
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/SDLeucks_jared.jpeg" alt="2022" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="/images/SDLeucks_janice_naya.jpeg" alt="2022" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/SDLeucks_kelle.jpeg" alt="2022" style="width:100%">
-  </div>
-</div>
-
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/SDLeucks_stadium.jpeg" alt="2022" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/SDLeucks_baseball.jpg" alt="2022" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="/images/SDLeucks_atrium.jpg" alt="2022" style="width:100%">
-  </div>
-</div>
-
-## Snohomish Leuck's
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/goofy.webp" alt="9999" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/goofy.webp" alt="9999" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/goofy.webp" alt="9999" style="width:100%">
-  </div>
-</div>
-
-## Vegas Leuck's
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/JML-67.jpg" alt="1999" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="/images/VegasLeucks_2022.jpg" alt="2022" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="/images/VegasLeuckFamily Pic_Christmas 2021.jpg" alt="2021" style="width:100%">
-  </div>
-</div>
