@@ -1,4 +1,4 @@
-## Mom and Pop Leuck
+## Photo Gallery
 <!---
 Markdown Format takes entire column
 -->
