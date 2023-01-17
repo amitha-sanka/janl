@@ -13,5 +13,5 @@
 | 6/23/2035 | Saturday | 11 pm | Dubai Mall | Hotel Lobby | Amitha Sanka | Guylian Belgian Chocolate Café | Zaatar w Zeit | Eataly|
 | 6/24/2035 | Sunday | 8am | Ziplining | Hotel Lobby | Lina Awad | Salt and Chillis | Puerto 99 | Pide Keyfi|
 | 6/25/2035 | Monday | 10am | Global Village | Hotel Lobby | Joselyn Anda | Sansation Arabian Ranches | Lowe | Amritsr Al Nahda |
-| 6/26/2035 | Tuesday | 12pm | Aquaventure | Hotel Lobby | Naja Fonseca  | The World Eatery |Kazoza | Food Marquet|
-| 6/27/2035 | Wednesday | 2pm | Dinner in the Sky | Hotel Lobby | Lina Awad |---|---|---|
+| 6/26/2035 | Tuesday | 12pm | Aquaventure | Hotel Lobby | Naja Fonseca  | The World Eatery | Kazoza | Food Marquet |
+| 6/27/2035 | Wednesday | 2pm | Museum Dinner in the Sky | Hotel Lobby | Lina Awad | Andreea's | Zero Gravity Dubai | Dinner in the Sky |
