@@ -1,17 +1,11 @@
-## Schedule
-> Browse [The 25 Best Things to Do in Dubai](https://www.cntraveler.com/gallery/best-things-to-do-in-dubai) to learn about some of the most popular and historically essential parts of Dubai. 
-- [Virtual Tour](https://www.airpano.com/360photo/uae-dubai-city-virtual-tour/)
-- [Google Maps Dubai, United Arab Emirates](https://www.google.com/maps/place/Dubai+-+United+Arab+Emirates/@25.0760224,55.2274879,10z/data=!3m1!4b1!4m5!3m4!1s0x3e5f43496ad9c645:0xbde66e5084295162!8m2!3d25.2048493!4d55.2707828)
-- [Virtual Tour of the 4 Seasons Jumeirah Beach Hotel](https://www.virtualworldinternet.com/portfolio/four-seasons-resort-dubai-at-jumeirah-beach)
+# Reviews
+> choose you rating to see other peoples thoughts or personally blog your own opinions
+# Choose a rating
 
-## Schedule
+## 1 star
+## 2 stars
+## 3 stars
+## 4 stars
+## 5 stars
 
-| Date | Day | Time | Event | Meet At | Coordinator | Breakfast | Lunch | Dinner |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 6/21/2035 | Thursday | 8pm | Arrive at 4 Seasons Hotel Dubai Jumeirah Beach | Hotel Lobby | Naja Fonseca |---|---| Praia Dubai Beach Restaurant & Lounge|
-| 6/22/2035 | Friday | 2pm | Camel Racing | Hotel Lobby | Amitha Sanka | The Green Room | Masha and The Bear | Star Grills Restaurant |
-| 6/23/2035 | Saturday | 11 pm | Dubai Mall | Hotel Lobby | Amitha Sanka | Guylian Belgian Chocolate Café | Zaatar w Zeit | Eataly|
-| 6/24/2035 | Sunday | 8am | Ziplining | Hotel Lobby | Lina Awad | Salt and Chillis | Puerto 99 | Pide Keyfi|
-| 6/25/2035 | Monday | 10am | Global Village | Hotel Lobby | Joselyn Anda | Sansation Arabian Ranches | Lowe | Amritsr Al Nahda |
-| 6/26/2035 | Tuesday | 12pm | Aquaventure | Hotel Lobby | Naja Fonseca  | The World Eatery | Kazoza | Food Marquet |
-| 6/27/2035 | Wednesday | 2pm | Museum Dinner in the Sky | Hotel Lobby | Lina Awad | Andreea's | Zero Gravity Dubai | Dinner in the Sky |
+# Calculate average rating
