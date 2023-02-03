@@ -29,7 +29,7 @@
 
 .dropdown-content {
   margin-bottom: 10px;
-  margin-left: 200px;
+  margin-left: 500px;
   display: none;
   position: absolute;
   background-color: #31614d;
