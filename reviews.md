@@ -8,8 +8,6 @@
 <style>
 .dropbtn {
   background-color: #253f61;
-  height: 100px;
-  width: 200px;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -23,6 +21,8 @@
 
 .dropdown {
   position: relative;
+  height: 200px;
+  width: 200px;
   display: inline-block;
 }
 
