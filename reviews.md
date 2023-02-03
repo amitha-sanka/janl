@@ -8,7 +8,8 @@
 <style>
 .dropbtn {
   background-color: #253f61;
-  margin: 100px;
+  margin-top: 10px;
+  margin-left: 200px;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -26,7 +27,8 @@
 }
 
 .dropdown-content {
-  margin: 100px;
+  margin-bottom: 10px;
+  margin-left: 200px;
   display: none;
   position: absolute;
   background-color: #31614d;
