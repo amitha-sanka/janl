@@ -21,6 +21,8 @@
 
 .dropdown {
   position: relative;
+  height: 200px;
+  width: 200px;
   display: inline-block;
 }
 
@@ -52,9 +54,9 @@
 <p>Click on the activity to view ratings</p>
 
 <div class="activity">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <button onclick="myFunction()" class="dropbtn">Activity</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#seaworld">Seaworlde</a>
+    <a href="#seaworld">Seaworld</a>
     <a href="#balboapark">Balboa Park</a>
     <a href="#delsur">Del Sur</a>
   </div>
