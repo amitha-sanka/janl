@@ -26,6 +26,7 @@
 }
 
 .dropdown-content {
+  margin: 100px;
   display: none;
   position: absolute;
   background-color: #31614d;
