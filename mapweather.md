@@ -9,8 +9,10 @@ week: 21
 
 
 <body>
+<br>
+<br>
 
-<h1>Weather Forecast</h1>
+<h1><strong style="color:black">Weather Forecast</strong></h1>
 
 <!-- <a href="#astronomybutton"><button> Weather API </button></a>
 
@@ -207,24 +209,42 @@ week: 21
         })
     }
 </script>
-If you choose a city, it will list out the location and weather forecast details.
+
+If you choose a city, it will list out the weather forecast and location details.
 
 <div id="astronomybutton">
 
-
+<br>
 <label for="city">Enter city name:</label>
-<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Location & Weather Forecast" onclick="cityButtonClick(document.getElementById('city').value)">
+<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Details" onclick="cityButtonClick(document.getElementById('city').value)">
 <br><br>
 
 <table>
+
+<style>
+
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+
+
+</style>
   <thead><u>Location Details</u>
   <tr>
-    <th>City</th>
-    <th>Region</th>
-    <th>Country</th>
-    <th>Time Zone</th>
-    <th>Local Time Epoch</th>
-    <th>Local Date and Time</th>
+    <th style="color:#00008B;">City</th>
+    <th style="color:#00008B;">Region</th>
+    <th style="color:#00008B;">Country</th>
+    <th style="color:#00008B;">Time Zone</th>
+    <th style="color:#00008B;">Local Time Epoch</th>
+    <th style="color:#00008B;">Local Date and Time</th>
   </tr>
   </thead>
   <tbody>
@@ -241,12 +261,12 @@ If you choose a city, it will list out the location and weather forecast details
 <table>
     <thead><u>Current Conditions</u>
     <tr>
-        <th>Temperature</th>
-        <th>Wind</th>
-        <th>Humidity</th>
-        <th>Cloud</th>
-        <th>Feels Like</th>
-        <th>Overall Condition</th>
+        <th style="color:#00008B;">Temperature (F)</th>
+        <th style="color:#00008B;">Wind (mph)</th>
+        <th style="color:#00008B;">Humidity</th>
+        <th style="color:#00008B;">Cloud</th>
+        <th style="color:#00008B;">Feels Like (F)</th>
+        <th style="color:#00008B;">Overall Condition</th>
     </tr>
     </thead>
     <tbody> 
@@ -262,15 +282,15 @@ If you choose a city, it will list out the location and weather forecast details
 <table>
     <thead><u>Weather Forecast</u> for the next 3 days
     <tr>
-        <th>Date</th>
-        <th> Max Temperature</th>
-        <th> Min Temperature</th>
-        <th> Average Temperature</th>
-        <th> Max Wind</th>
-        <th> Total Precipitation</th>
-        <th> Will it Rain?</th>
-        <th> Chance of Rain</th>
-        <th> Overall Condition</th>
+        <th style="color:#00008B;">Date</th>
+        <th style="color:#00008B;"> Max Temperature (F)</th>
+        <th style="color:#00008B;">Min Temperature (F)</th>
+        <th style="color:#00008B;"> Average Temperature (F)</th>
+        <th style="color:#00008B;">Max Wind (mph)</th>
+        <th style="color:#00008B;">Total Precipitation (in)</th>
+        <th style="color:#00008B;">Will it Rain?</th>
+        <th style="color:#00008B;">Chance of Rain</th>
+        <th style="color:#00008B;">Overall Condition</th>
     </tr>
     </thead>
     <tbody>
@@ -313,7 +333,7 @@ If you choose a city, it will list out the location and weather forecast details
     </tbody>
 </table>    
 
-
 <script>
+
 
 
