@@ -26,6 +26,8 @@
 
 .dropdown-content {
   display: none;
+  height: 200000px
+  width: 20000px
   position: absolute;
   background-color: #31614d;
   min-width: 160px;
@@ -52,9 +54,9 @@
 <p>Click on the activity to view ratings</p>
 
 <div class="activity">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <button onclick="myFunction()" class="dropbtn">Activity</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#seaworld">Seaworlde</a>
+    <a href="#seaworld">Seaworld</a>
     <a href="#balboapark">Balboa Park</a>
     <a href="#delsur">Del Sur</a>
   </div>
