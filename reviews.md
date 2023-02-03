@@ -21,8 +21,6 @@
 
 .dropdown {
   position: relative;
-  height: 200px;
-  width: 200px;
   display: inline-block;
 }
 
@@ -82,6 +80,8 @@ window.onclick = function(event) {
     }
   }
 }
+<style>
+        h1{text-align: center;}
 </script>
 
 </body>
