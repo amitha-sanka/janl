@@ -6,12 +6,21 @@ type: pbl
 week: 21
 ---
 <!-- HTML table fragment for page -->
-## APIs in this Sub Menu
-> HTML, CSS, and JavaScript are the front-end of the API.  Python and API resource definitions are used for RESTful API definitions. Abstraction of Frontend and Backend code, the exchange of standard data format (JSON), and guidelines for exchange (REST) is a technique that saves a lot of time between developers.  Learning APIs is a highly recommended step for every developer trying to break into the world of tech.<html>
+
+
+<body>
+
+<h1>Weather Forecast</h1>
+
+<!-- <a href="#astronomybutton"><button> Weather API </button></a>
+
+    
+<!-- HTML table fragment for page -->
 
 <script>
+    // alert('Enter city of destination and click on "Get Location & Weather Forecast"');
 
-    function testButtonClick(city) {
+    function cityButtonClick(city) {
         
         if (!city.trim()) {
             alert("Enter a city in San Diego County.");
@@ -21,16 +30,17 @@ week: 21
 //alert("yo momma!:  " + city);
 
         // prepare HTML result container for new output
-        const resultContainer = document.getElementById("astronomy");
+//        const resultContainer = document.getElementById("test");
 
         //clear contents of astronomy table
-        resultContainer.innerHTML = "";
+//        resultContainer.innerHTML = "<i>hhhhhh</>";
 
 //alert("1: " + resultContainer);
 
         // prepare fetch options
-        const url = "https://weatherapi-com.p.rapidapi.com/astronomy.json?q=" + city; 
-                        
+        const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3';
+
+//alert(url);
 //alert("2: " + url);
             
         const headers = {
@@ -41,7 +51,7 @@ week: 21
             headers: {
                 'Content-Type': 'application/json',
                 'X-RapidAPI-Key': '0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b',
-                'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+		        'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
             },
         };
 
@@ -70,84 +80,148 @@ week: 21
             response.json().then(data => {
                 console.log(data);
                 console.log(data.location)
+                console.log(data.current)
+                console.log(data.condition)
+                console.log(data.forecast)
 
-                // World Data
+                // Weather Data
                 document.getElementById("name").innerHTML = data.location.name;
                 document.getElementById("region").innerHTML = data.location.region;
-                document.getElementById("country").innerHTML = data.location.country;
-                document.getElementById("lat").innerHTML = data.location.lat;
-                document.getElementById("lon").innerHTML = data.location.lon;
+                document.getElementById("country").innerHTML = data.location.country;                
                 document.getElementById("tz_id").innerHTML = data.location.tz_id;
                 document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
                 document.getElementById("localtime").innerHTML = data.location.localtime;
 
+                // Current Conditions
+                document.getElementById("temp_f").innerHTML = data.current.temp_f;
+                document.getElementById("wind_mph").innerHTML = data.current.wind_mph;
+                document.getElementById("humidity").innerHTML = data.current.humidity;                
+                document.getElementById("cloud").innerHTML = data.current.cloud;
+                document.getElementById("feelslike_f").innerHTML = data.current.feelslike_f;
+                document.getElementById("condition_text").innerHTML = data.current.condition.text;
+
+                // Weather Forecast
+                // day 1
+                document.getElementById("date_1").innerHTML = data.forecast.forecastday[0].date;
+                document.getElementById("maxtemp_f_1").innerHTML = data.forecast.forecastday[0].day.maxtemp_f;
+                document.getElementById("mintemp_f_1").innerHTML = data.forecast.forecastday[0].day.mintemp_f;
+                document.getElementById("avgtemp_f_1").innerHTML = data.forecast.forecastday[0].day.avgtemp_f;
+                document.getElementById("maxwind_mph_1").innerHTML = data.forecast.forecastday[0].day.maxwind_mph;
+                document.getElementById("totalprecip_in_1").innerHTML = data.forecast.forecastday[0].day.totalprecip_in;
+                document.getElementById("daily_will_it_rain_1").innerHTML = data.forecast.forecastday[0].day.daily_will_it_rain;
+                document.getElementById("daily_chance_of_rain_1").innerHTML = data.forecast.forecastday[0].day.daily_chance_of_rain;
+                document.getElementById("forecast_text_1").innerHTML = data.forecast.forecastday[0].day.condition.text;
+                // day 2
+                document.getElementById("date_2").innerHTML = data.forecast.forecastday[1].date;
+                document.getElementById("maxtemp_f_2").innerHTML = data.forecast.forecastday[1].day.maxtemp_f;
+                document.getElementById("mintemp_f_2").innerHTML = data.forecast.forecastday[1].day.mintemp_f;
+                document.getElementById("avgtemp_f_2").innerHTML = data.forecast.forecastday[1].day.avgtemp_f;
+                document.getElementById("maxwind_mph_2").innerHTML = data.forecast.forecastday[1].day.maxwind_mph;
+                document.getElementById("totalprecip_in_2").innerHTML = data.forecast.forecastday[1].day.totalprecip_in;
+                document.getElementById("daily_will_it_rain_2").innerHTML = data.forecast.forecastday[1].day.daily_will_it_rain;
+                document.getElementById("daily_chance_of_rain_2").innerHTML = data.forecast.forecastday[1].day.daily_chance_of_rain;
+                document.getElementById("forecast_text_2").innerHTML = data.forecast.forecastday[1].day.condition.text;
+                // day 3 
+                document.getElementById("date_3").innerHTML = data.forecast.forecastday[2].date;
+                document.getElementById("maxtemp_f_3").innerHTML = data.forecast.forecastday[2].day.maxtemp_f;
+                document.getElementById("mintemp_f_3").innerHTML = data.forecast.forecastday[2].day.mintemp_f;
+                document.getElementById("avgtemp_f_3").innerHTML = data.forecast.forecastday[2].day.avgtemp_f;
+                document.getElementById("maxwind_mph_3").innerHTML = data.forecast.forecastday[2].day.maxwind_mph;
+                document.getElementById("totalprecip_in_3").innerHTML = data.forecast.forecastday[2].day.totalprecip_in;
+                document.getElementById("daily_will_it_rain_3").innerHTML = data.forecast.forecastday[2].day.daily_will_it_rain;
+                document.getElementById("daily_chance_of_rain_3").innerHTML = data.forecast.forecastday[2].day.daily_chance_of_rain;
+                document.getElementById("forecast_text_3").innerHTML = data.forecast.forecastday[2].day.condition.text;
+
+
                 //alert("data.astronomy" + data.astronomy.astro.sunrise);
                 // tr for each row
+/*
                 const tr = document.createElement("tr");
 
                 // td for each column
-                const sunrise = document.createElement("td");
-                const sunset = document.createElement("td");
-                const moonrise = document.createElement("td");
-                const moonset = document.createElement("td");
-                const moon_phase = document.createElement("td");
-                const moon_illumination = document.createElement("td");
+                const temp_f = document.createElement("td"); 
+                const wind_mph = document.createElement("td"); 
+                const humidity = document.createElement("td"); 
+                const cloud = document.createElement("td"); 
+                const feelslike_f = document.createElement("td"); 
+                const condition_text = document.createElement("td");
+                const condition_icon = document.createElement("td"); 
 
+                const date = document.createElement("td"); 
+                const maxtemp_f = document.createElement("td");                
+                const mintemp_f = document.createElement("td"); 
+                const avgtemp_f = document.createElement("td");                 
+                const maxwind_mph = document.createElement("td");                 
+                const totalprecip_in = document.createElement("td");                
+                const daily_will_it_rain = document.createElement("td"); 
+                const daily_chance_of_rain = document.createElement("td");                 
+                const forecast_text = document.createElement("td");                
+                const forecast_icon = document.createElement("td"); 
+*/
                 // data is specific to the API
-                sunrise.innerHTML = data.astronomy.astro.sunrise;
-                sunset.innerHTML = data.astronomy.astro.sunset; 
-                moonrise.innerHTML = data.astronomy.astro.moonrise; 
-                moonset.innerHTML = data.astronomy.astro.moonset; 
-                moon_phase.innerHTML = data.astronomy.astro.moon_phase; 
-                moon_illumination.innerHTML = data.astronomy.astro.moon_illumination; 
-
+/*
+                temp_f.innerHTML = data.current.temp_f;
+                wind_mph.innerHTML = data.condition.wind_mph;
+                humidity.innerHTML = data.condition.humidity;
+                cloud.innerHTML = data.condition.cloud;                 
+                feelslike_f.innerHTML = data.condition.feelslike_f;
+                condition_text.innerHTML = data.condition.text;
+                condition_icon.innerHTML = data.condition.icon;
+                date.innerHTML = data.forecast.forecastday.date;
+                maxtemp_f.innerHTML = data.forecast.forecastday[0].day.maxtemp_f;
+                mintemp_f.innerHTML = data.forecast.forecastday[0].day.mintemp_f;
+                avgtemp_f.innerHTML = data.forecast.forecastday[0].day.avgtemp_f;
+                maxwind_mph.innerHTML = data.forecast.forecastday[0].day.maxwind_mph;
+                totalprecip_in.innerHTML = data.forecast.forecastday[0].day.totalprecip_in;
+                daily_will_it_rain.innerHTML = data.forecast.forecastday[0].day.daily_will_it_rain;
+                daily_chance_of_rain.innerHTML = data.forecast.forecastday[0].day.daily_chance_of_rain;
+                forecast_text.innerHTML = data.forecast.forecastday[0].day.condition.text;
+                forecast_icon.innerHTML = data.forecast.forecastday[0].day.condition.icon;
+*/
                 // this builds td's into tr
-                tr.appendChild(sunrise);
-                tr.appendChild(sunset);
-                tr.appendChild(moonrise);
-                tr.appendChild(moonset);
-                tr.appendChild(moon_phase);
-                tr.appendChild(moon_illumination);
+/*                
+                tr.appendChild(temp_f);
+                tr.appendChild(wind_mph);
+                tr.appendChild(humidity);
+                tr.appendChild(cloud);
+                tr.appendChild(feelslike_f);
+                tr.appendChild(condition_text);
+                tr.appendChild(condition_icon);
+
+                tr.appendChild(date);
+                tr.appendChild(maxtemp_f);
+                tr.appendChild(mintemp_f);
+                tr.appendChild(avgtemp_f);
+                tr.appendChild(maxwind_mph);
+                tr.appendChild(totalprecip_in);             
+                tr.appendChild(daily_will_it_rain);
+                tr.appendChild(daily_chance_of_rain);
+                tr.appendChild(forecast_text);
+                tr.appendChild(forecast_icon);
 
                 // add HTML to container
                 resultContainer.appendChild(tr);
+*/
+
             })
         })
-
-//alert("4: post fetch");
-
     }
-
-
 </script>
-
-<body>
-
-<h1>API Information and Example</h1>
-
-<a href="#astronomybutton"><button> Astronomy API </button></a>
-
-    
-<!-- HTML table fragment for page -->
-
-
-If you choose a city, it will list out the location and astronomy details.
+If you choose a city, it will list out the location and weather forecast details.
 
 <div id="astronomybutton">
 
 
 <label for="city">Enter city name:</label>
-<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Location & Astronomy" onclick="testButtonClick(document.getElementById('city').value)">
+<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Location & Weather Forecast" onclick="cityButtonClick(document.getElementById('city').value)">
 <br><br>
 
 <table>
-  <thead>Location Details
+  <thead><u>Location Details</u>
   <tr>
     <th>City</th>
     <th>Region</th>
     <th>Country</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
     <th>Time Zone</th>
     <th>Local Time Epoch</th>
     <th>Local Date and Time</th>
@@ -157,8 +231,6 @@ If you choose a city, it will list out the location and astronomy details.
     <td id="name"></td>
     <td id="region"></td>
     <td id="country"></td>
-    <td id="lat"></td>
-    <td id="lon"></td>
     <td id="tz_id"></td>
     <td id="localtime_epoch"></td>
     <td id="localtime"></td>
@@ -166,23 +238,78 @@ If you choose a city, it will list out the location and astronomy details.
 </table>
 
 
-
-
-
-
 <table>
-    <thead>Astronomy Details
+    <thead><u>Current Conditions</u>
     <tr>
-        <th>Sunrise</th>
-        <th>Sunset</th>
-        <th>Moonrise</th>
-        <th>Moonset</th>
-        <th>Moon Phase</th>
-        <th>Moon Illumination</th>
+        <th>Temperature</th>
+        <th>Wind</th>
+        <th>Humidity</th>
+        <th>Cloud</th>
+        <th>Feels Like</th>
+        <th>Overall Condition</th>
     </tr>
     </thead>
-    <tbody id="astronomy">
+    <tbody> 
+        <td id="temp_f"></td>
+        <td id="wind_mph"></td>
+        <td id="humidity"></td>        
+        <td id="cloud"></td>
+        <td id="feelslike_f"></td>
+        <td id="condition_text"></td>
+    </tbody>
+</table>
+
+<table>
+    <thead><u>Weather Forecast</u> for the next 3 days
+    <tr>
+        <th>Date</th>
+        <th> Max Temperature</th>
+        <th> Min Temperature</th>
+        <th> Average Temperature</th>
+        <th> Max Wind</th>
+        <th> Total Precipitation</th>
+        <th> Will it Rain?</th>
+        <th> Chance of Rain</th>
+        <th> Overall Condition</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td id="date_1"></td>        
+        <td id="maxtemp_f_1"></td>
+        <td id="mintemp_f_1"></td>
+        <td id="avgtemp_f_1"></td>
+        <td id="maxwind_mph_1"></td>
+        <td id="totalprecip_in_1"></td>
+        <td id="daily_will_it_rain_1"></td>
+        <td id="daily_chance_of_rain_1"></td>
+        <td id="forecast_text_1"></td>
         <!-- generated rows -->
+    </tr>
+    <tr>
+        <td id="date_2"></td>        
+        <td id="maxtemp_f_2"></td>
+        <td id="mintemp_f_2"></td>
+        <td id="avgtemp_f_2"></td>
+        <td id="maxwind_mph_2"></td>
+        <td id="totalprecip_in_2"></td>
+        <td id="daily_will_it_rain_2"></td>
+        <td id="daily_chance_of_rain_2"></td>
+        <td id="forecast_text_2"></td>
+        <!-- generated rows -->
+    </tr>
+    <tr>
+        <td id="date_3"></td>        
+        <td id="maxtemp_f_3"></td>
+        <td id="mintemp_f_3"></td>
+        <td id="avgtemp_f_3"></td> 
+        <td id="maxwind_mph_3"></td>
+        <td id="totalprecip_in_3"></td>
+        <td id="daily_will_it_rain_3"></td>
+        <td id="daily_chance_of_rain_3"></td>
+        <td id="forecast_text_3"></td>
+        <!-- generated rows -->
+    </tr>
     </tbody>
 </table>    
 
@@ -190,40 +317,3 @@ If you choose a city, it will list out the location and astronomy details.
 <script>
 
 
-/*
-import requests
-
-url = "https://weatherapi-com.p.rapidapi.com/astronomy.json"
-
-city = input("Choose a city")
-querystring = {"q":city}
-
-headers = {
-	"X-RapidAPI-Key": "0b6ef107f7msh5606de624633ceap17521ejsn27566d20ff5b",
-	"X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com"
-}
-
-response = requests.request("GET", url, headers=headers, params=querystring)
-
-print(response.json)
-
-print("Location details")
-loc = response.json().get('location')  // turn response to json() so we can extract "world_total"
-for key, value in loc.items():  // this finds key, value pairs in country
-    print(key, ":", value)
-
-print()
-
-// This code looks for USA in "countries_stats"
-print("Astronomy details")
-astro = response.json().get('astronomy') // countries is the key, countries_stat is the value
-// print(astro.items())
-for key, value in astro.items():
-	for x in value.keys() :
-		print(x, ":", value[x])
-
-//astro in astronomy:  # countries is a list
-    //print(astro)
-*/
-
-<script>
