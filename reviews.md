@@ -13,6 +13,7 @@
   color: white;
   padding: 16px;
   font-size: 16px;
+  min-width: 160px;
   border: none;
   cursor: pointer;
 }
