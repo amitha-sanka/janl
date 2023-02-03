@@ -12,13 +12,10 @@
   padding: 5px;
 }
 
-.hobbies {
-  position: fixed;
-  left: 100px;
-  top: 150px;
-}
 
 </style>
+
+
 
 <h1 id="hobbies"><u>Choose a Hobby</u></h1>
 <h1 id="budget"><u>Choose a Budget</u></h1>
