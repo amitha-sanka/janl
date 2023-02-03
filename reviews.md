@@ -26,8 +26,8 @@
 
 .dropdown-content {
   display: none;
-  height: 200000px
-  width: 20000px
+  height: 200000px;
+  width: 20000px;
   position: absolute;
   background-color: #31614d;
   min-width: 160px;
