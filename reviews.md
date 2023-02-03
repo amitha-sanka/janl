@@ -47,6 +47,10 @@
 </style>
 </head>
 <body>
+p {
+    border: 2px solid powderblue;
+    margin:100px;
+}
 
 <h2>Which activty would you like to view</h2>
 <p>Click on the activity to view ratings</p>
