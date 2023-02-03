@@ -1,7 +1,7 @@
 # Reviews
 > choose you rating to see other peoples thoughts or personally blog your own opinions
 
-<!DOCTYPE html>
+
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,8 +80,7 @@ window.onclick = function(event) {
     }
   }
 }
-<style>
-        myDropdown{text-align: center;}
+
 </script>
 
 </body>
