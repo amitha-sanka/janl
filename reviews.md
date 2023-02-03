@@ -1,12 +1,13 @@
 # Reviews
 > choose you rating to see other peoples thoughts or personally blog your own opinions
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .dropbtn {
-  background-color: #3498DB;
+  background-color: #253f61;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -15,7 +16,7 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
+  background-color: #253f61;
 }
 
 .dropdown {
@@ -26,7 +27,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: #31614d;
   min-width: 160px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -47,15 +48,15 @@
 </head>
 <body>
 
-<h2>Clickable Dropdown</h2>
-<p>Click on the button to open the dropdown menu.</p>
+<h2>Which activty would you like to view</h2>
+<p>Click on the activity to view ratings</p>
 
-<div class="dropdown">
+<div class="activity">
   <button onclick="myFunction()" class="dropbtn">Dropdown</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="#seaworld">Seaworlde</a>
+    <a href="#balboapark">Balboa Park</a>
+    <a href="#delsur">Del Sur</a>
   </div>
 </div>
 
