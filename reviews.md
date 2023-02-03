@@ -81,7 +81,7 @@ window.onclick = function(event) {
   }
 }
 <style>
-        h1{text-align: center;}
+        myDropdown{text-align: center;}
 </script>
 
 </body>
