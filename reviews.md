@@ -61,7 +61,7 @@
   <button onclick="myFunction()" class="dropbtn">Activity</button>
   <div id="myDropdown" class="dropdown-content">
     <p><a href="https://www.w3schools.com/">Seaworld</a></p>
-    <p><a href="https://amitha-sanka.github.io/seaworld">Balboa Park</a></p>
+    <p><a href="https://amitha-sanka.github.io/seaworld.html">Balboa Park</a></p>
     <p><a href="#delsur">Del Sur</a></p>
   </div>
 </div>
