@@ -61,7 +61,7 @@
   <button onclick="myFunction()" class="dropbtn">Activity</button>
   <div id="myDropdown" class="dropdown-content">
     <p><a href="https://www.w3schools.com/">Seaworld</a>
-    <a href="#balboapark">Balboa Park</a>
+    <a href="#https://amitha-sanka.github.io/seaworld">Balboa Park</a>
     <a href="#delsur">Del Sur</a>
   </div>
 </div>
@@ -91,13 +91,3 @@ window.onclick = function(event) {
 
 </body>
 </html>
-
-# Choose a rating
-
-## 1 star/somethinglink
-## 2 stars
-## 3 stars
-## 4 stars
-## 5 stars
-
-# Calculate average rating
