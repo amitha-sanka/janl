@@ -1,8 +1,16 @@
----
-title: Balboa Park Reviews
-layout: default
----
+<html>
+<head>
+    <title>Text alignment</title>
+</head>
+<body>
+    <h1 align="center">Balboa Park</h1>
+</body>
+</html>
 
-## Balboa
-
-please
+<head>
+    <title>Text alignment</title>
+</head>
+<body>
+    <h1 align="center">Balboa Park</h1>
+</body>
+</html>
