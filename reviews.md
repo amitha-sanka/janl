@@ -1,5 +1,3 @@
-# Reviews
-> choose you rating to see other peoples thoughts or personally blog your own opinions
 
 
 <html>
@@ -9,7 +7,7 @@
 .dropbtn {
   background-color: #253f61;
   margin-top: 10px;
-  margin-left: 650px;
+  margin-left: 635px;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -29,7 +27,7 @@
 
 .dropdown-content {
   margin-bottom: 10px;
-  margin-left: 650px;
+  margin-left: 635px;
   display: none;
   position: absolute;
   background-color: #31614d;
