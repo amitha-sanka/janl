@@ -27,7 +27,6 @@ body{
 	transition: background 0.5s ease;
 }
 .button:hover{
-
 }
 .active#heart:before,.active#heart:after{
 	background: red !important;
