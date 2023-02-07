@@ -1,7 +1,5 @@
-# Your Likes
-> You can find all your hearted activities and places here: 
+# You can find all your hearted activities and places here: 
 
-<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -17,17 +15,16 @@
   cursor: pointer;
 }
 
-.button1 {background-color: #ff0000;} /* */
+.button {background-color: #ff0000;} /* */
 
 </style>
 </head>
 <body>
 
-<h1>The button element - Styled with CSS</h1>
-<p>Change the background color of a button with the background-color property:</p>
+<h1></h1>
+<p></p>
 
-<button class="button button1"></button>
-<button class="button button2"></button>
+<button class="button"></button>
 
 </body>
 </html>
