@@ -9,7 +9,7 @@
 .dropbtn {
   background-color: #253f61;
   margin-top: 10px;
-  margin-left: 600px;
+  margin-left: 650px;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -29,7 +29,7 @@
 
 .dropdown-content {
   margin-bottom: 10px;
-  margin-left: 600px;
+  margin-left: 650px;
   display: none;
   position: absolute;
   background-color: #31614d;
@@ -52,7 +52,6 @@
 </style>
 </head>
     <title>Text alignment</title>
-</head>
 <body>
     <h1 align="center">Reviews</h1>
 
