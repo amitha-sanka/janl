@@ -1,5 +1,3 @@
-# Reviews
-> choose you rating to see other peoples thoughts or personally blog your own opinions
 
 
 <html>
@@ -9,11 +7,11 @@
 .dropbtn {
   background-color: #253f61;
   margin-top: 10px;
-  margin-left: 500px;
+  margin-left: 635px;
   color: white;
   padding: 16px;
   font-size: 16px;
-  min-width: 160px;
+  min-width: 180px;
   border: none;
   cursor: pointer;
 }
@@ -29,11 +27,11 @@
 
 .dropdown-content {
   margin-bottom: 10px;
-  margin-left: 500px;
+  margin-left: 635px;
   display: none;
   position: absolute;
   background-color: #31614d;
-  min-width: 160px;
+  min-width: 180px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -51,7 +49,9 @@
 .show {display: block;}
 </style>
 </head>
+    <title>Text alignment</title>
 <body>
+    <h1 align="center">Reviews</h1>
 
 
 <h2>Which activty would you like to view</h2>
@@ -60,9 +60,9 @@
 <div class="activity">
   <button onclick="myFunction()" class="dropbtn">Activity</button>
   <div id="myDropdown" class="dropdown-content">
-    <p><a href="https://www.w3schools.com/">Seaworld</a></p>
-    <p><a href="seaworld.html">Balboa Park</a></p>
-    <p><a href="#delsur">Del Sur</a></p>
+    <p><a href="seaworld.html">Seaworld</a></p>
+    <p><a href="balboapark.html">Balboa Park</a></p>
+    <p><a href="delmar.html">Del Sur</a></p>
   </div>
 </div>
 

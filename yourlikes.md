@@ -1,0 +1,33 @@
+# Your Likes
+> You can find all your hearted activities and places here: 
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.button {
+  border: none;
+  color: rgb(255, 1, 1);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #ff0000;} /* */
+
+</style>
+</head>
+<body>
+
+<h1>The button element - Styled with CSS</h1>
+<p>Change the background color of a button with the background-color property:</p>
+
+<button class="button button1"></button>
+<button class="button button2"></button>
+
+</body>
+</html>
