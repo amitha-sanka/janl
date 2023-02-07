@@ -9,11 +9,11 @@
 .dropbtn {
   background-color: #253f61;
   margin-top: 10px;
-  margin-left: 500px;
+  margin-left: 600px;
   color: white;
   padding: 16px;
   font-size: 16px;
-  min-width: 160px;
+  min-width: 180px;
   border: none;
   cursor: pointer;
 }
@@ -29,11 +29,11 @@
 
 .dropdown-content {
   margin-bottom: 10px;
-  margin-left: 500px;
+  margin-left: 600px;
   display: none;
   position: absolute;
   background-color: #31614d;
-  min-width: 160px;
+  min-width: 180px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
