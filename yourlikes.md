@@ -9,7 +9,7 @@ html{
   min-height:100%;
 }
 body{
-	background: #111;
+	background: #ece4d8;
   position:relative;
   min-height:100%;
 }
