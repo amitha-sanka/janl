@@ -1,0 +1,26 @@
+{
+  "name": "janl",
+  "version": "1.0.0",
+  "description": "Usage",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitha-sanka/janl.git"
+  },
+  "keywords": [],
+  "author": "Naja Fonseca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitha-sanka/janl/issues"
+  },
+  "homepage": "https://github.com/amitha-sanka/janl#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

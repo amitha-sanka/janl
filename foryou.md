@@ -20,3 +20,5 @@
 <h1 id="hobbies"><u>Choose a Hobby</u></h1>
 <h1 id="budget"><u>Choose a Budget</u></h1>
 <h1 id="duration"><u>Choose the Duration</u></h1>
+
+
