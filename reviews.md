@@ -51,7 +51,10 @@
 .show {display: block;}
 </style>
 </head>
+    <title>Text alignment</title>
+</head>
 <body>
+    <h1 align="center">Reviews</h1>
 
 
 <h2>Which activty would you like to view</h2>
