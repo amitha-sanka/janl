@@ -10,7 +10,7 @@
 
 <p>
 <a href="onestar.html">
-<img border="0" alt="onestar" src="star1.png" width="50" height="50">
+<img border="0" alt="onestar" src="star1.jpg" width="50" height="50">
 </a>
 </p>
 
