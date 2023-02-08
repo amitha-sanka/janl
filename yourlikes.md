@@ -1,8 +1,8 @@
 # You can find all your hearted activities and places here: 
 
-<head>
+<body>
 <script src="yourlikes.js"></script>
-</head>
+</body>
 <div id='heart' class='button'></div>
 
 
