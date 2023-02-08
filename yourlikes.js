@@ -9,18 +9,18 @@ $( document ).ready(function() {
         // burst animation
         tween1 = new mojs.Burst({
             parent: el,
-      radius:   { 0: 100 },
-      angle:    { 0: 45 },
-      y: -10,
-      count:    10,
-       radius:       100,
-      children: {
-        shape:        'circle',
-        radius:       30,
-        fill:         [ 'red', 'white' ],
-        strokeWidth:  15,
-        duration:     500,
-      }
+            radius:   { 0: 100 },
+            angle:    { 0: 45 },
+            y: -10,
+            count:    10,
+            radius:       100,
+            children: {
+                shape:        'circle',
+                radius:       30,
+                fill:         [ 'red', 'white' ],
+                strokeWidth:  15,
+                duration:     500,
+            }
         });
     
     
@@ -31,20 +31,20 @@ $( document ).ready(function() {
                 el.style.WebkitTransform = el.style.transform = 'scale3d(' + scaleProgress + ',' + scaleProgress + ',1)';
             }
         });
-              tween3 = new mojs.Burst({
+        tween3 = new mojs.Burst({
             parent: el,
-      radius:   { 0: 100 },
-      angle:    { 0: -45 },
-      y: -10,
-      count:    10,
-       radius:       125,
-      children: {
-        shape:        'circle',
-        radius:       30,
-        fill:         [ 'white', 'red' ],
-        strokeWidth:  15,
-        duration:     400,
-      }
+            radius:   { 0: 100 },
+            angle:    { 0: -45 },
+            y: -10,
+            count:    10,
+            radius:       125,
+            children: {
+                shape:        'circle',
+                radius:       30,
+                fill:         [ 'white', 'red' ],
+                strokeWidth:  15,
+                duration:     400,
+            }
         });
     
     // add tweens to timeline:
