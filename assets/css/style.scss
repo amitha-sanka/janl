@@ -1,8 +1,5 @@
----
----
 
 @import "{{ site.theme }}";
-
 
 /* "row style" is flexible size and aligns pictures in center */
 .row {
@@ -22,7 +19,7 @@
     min-height:100%;
   }
   body{
-    background: #ece4d8;
+    background: #ffe4bb;
     position:relative;
     min-height:100%;
   }
