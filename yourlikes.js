@@ -1,3 +1,5 @@
+
+
 $( document ).ready(function() {
     var scaleCurve = mojs.easing.path('M0,100 L25,99.9999983 C26.2328835,75.0708847 19.7847843,0 100,0');
        var el = document.querySelector('.button'),
@@ -38,13 +40,13 @@ $( document ).ready(function() {
             y: -10,
             count:    10,
             radius:       125,
-            children: {
-                shape:        'circle',
-                radius:       30,
-                fill:         [ 'white', 'red' ],
-                strokeWidth:  15,
-                duration:     400,
-            }
+        children: {
+            shape:        'circle',
+            radius:       30,
+            fill:         [ 'white', 'red' ],
+            strokeWidth:  15,
+            duration:     400,
+        }
         });
     
     // add tweens to timeline:
