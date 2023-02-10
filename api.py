@@ -33,7 +33,7 @@ class ActivitiesList(Resource):
         return ACTIVITIES[activity_id], 201
 
 
-api.add_resource(ActivitiesList, '/activity/')
+api.add_resource(ActivitiesList, '/api/')
 
 if __name__ == '__main__': {
     app.run(debug==True)
