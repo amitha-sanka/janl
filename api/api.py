@@ -23,7 +23,7 @@ class ActivitiesList(Resource):
         
         activity_id = int(max(activity.keys())) + 1
         activity_id = '%i' % activity_id
-        activity[activity_id] = {
+        ACTIVITIES[activity_id] = {
             "activity": args["activity"],
             "hobby": args["hobby"],
             "price_range": args["price_range"],
@@ -59,9 +59,14 @@ class Activities(Resource):
 
 
     def delete(self, activity_id):
+        if activity_id not in ACTIVITIES:
+            return 'Not Found', 404
+        else: 
+            del ACTIVITIES[activity_id]
+            return '', 204
 
-api.add_resource(ActivitiesList, '/api/')
-api.add_resource(Activity, '/api/<activity_id>')
+    api.add_resource(ActivitiesList, '/api/')
+    api.add_resource(Activity, '/api/<activity_id>')
 
 if __name__ == '__main__': {
     app.run(debug==True)
