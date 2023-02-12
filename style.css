@@ -2,7 +2,7 @@ body
 {
     margin: 0;
     padding: 0;
-    background:#262626;
+    background:#ece4d8;
 }
 a
 {
@@ -14,7 +14,7 @@ a
     height: 75px;
     background: #fff;
     border-radius: 75px;
-    color: #262626;
+    color: #ece4d8;
     transition: 0.5s; 
 }
 
