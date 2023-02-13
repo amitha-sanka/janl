@@ -1,6 +1,5 @@
 # You can find all your hearted activities and places here: 
 
-
 <html>
 <head>
 <title>Like Button - Heart on Click</title>

@@ -6,52 +6,18 @@ body
 }
 a
 {
-    content: '' ; 
     position: absolute;
-    top: 0; 
-    left: 0;
-    background: #FFFFFF;
-    width: 50%;  
-    height: 100%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 75px;
+    background: #fff;
+    border-radius: 75px;
+    color: #ece4d8;
     transition: 0.5s; 
-    z-index: -1;
-    transform: translateX(-200px) rotate(-325deg);
-    opacity: 0; 
-    visibility: visible;
 }
-a 
-{
-    Left: 30.5px; 
-    transform: translateX(0) rotate(35deg);
-    border-bottom-left-radius: 75px; 
-    border-top-left-radius: 75px; 
-    opacity: 1; 
-    visibility: visible;
-}
-a
-{
-    content: '' ; 
-    position: absolute;
-    top: 0; 
-    right: 0;
-    background: #ffffff;
-    width: 50%;  
-    height: 100%; 
-    transition: 0.5s; 
-    z-index: -1;
-    transform: translateX(200px) rotate(325deg);
-    opacity: 0; 
-    visibility: hidden;
-}
-a
-{
-    right: 30.5px; 
-    transform: translateX(0) rotate(-35deg);
-    border-bottom-right-radius: 75px; 
-    border-top-right-radius: 75px; 
-    opacity: 1; 
-    visibility: visible;
-}
+
 a.active
 {
     background: transparent;
@@ -107,3 +73,4 @@ a.active:after
     opacity: 1; 
     visibility: visible;
 }
+
