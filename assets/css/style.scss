@@ -1,10 +1,18 @@
 @import "{{ site.theme }}";
 
+<<<<<<< HEAD
 $high-emph: #004aab; // text on the very top, submenu pages text color
 $med-emph: #90c4fb; // description of post
 $low-emph: #3a99ff; // dates on posts
 $dark-grey : #fcd1de; // background
 $overlay : #efe7de; // table background
+=======
+$high-emph: #004aab;
+$med-emph: #90c4fb; 
+$low-emph: #3a99ff; 
+$dark-grey : #fcd1de; 
+$overlay : #efe7de; 
+>>>>>>> ba6a837 (bannerremoval)
 $overlay-light: mix($dark-grey, white, 86%);
 
 html, body, input, textarea, select, button {   
