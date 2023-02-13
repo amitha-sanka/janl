@@ -1,65 +1,93 @@
-
 @import "{{ site.theme }}";
 
-/* "row style" is flexible size and aligns pictures in center */
-.row {
-    align-items: center;
-    display: flex;
-  }
-  
-  /* "column style" is one-third of the width with padding */
-  .column {
-    flex: 33.33%;
-    padding: 5px;
-  }
+$high-emph: #004aab; // text on the very top, submenu pages text color
+$med-emph: #90c4fb; // description of post
+$low-emph: #3a99ff; // dates on posts
+$dark-grey : #fcd1de; // background
+$overlay : #efe7de; // table background
+$overlay-light: mix($dark-grey, white, 86%);
 
-  html{
-    padding:0;
-    margin: 0;
-    min-height:100%;
-  }
-  body{
-    background: #ece4d8;
-    position:relative;
-    min-height:100%;
-  }
-  .button{
-    width: 50px;
-    height: 50px;
-    top:50%;
-    position: fixed;
-    left: 50%;
-    margin-top: -45px;
-    margin-left: -50px;
-    border-radius: 5px;
-    background: none;
-    cursor: pointer;
-    transition: background 0.5s ease;
-  }
-  .active#heart:before,.active#heart:after{
-    background: red !important;
-  }
-  #heart {
-      width: 100px;
-      height: 90px;
-      transition: background 0.5s ease;
-  }
-  #heart:before,
-  #heart:after {
-    transition: background 0.5s ease;
-      position: absolute;
-      content: "";
-      left: 50px;
-      top: 0;
-      width: 50px;
-      height: 80px;
-      background: dimgrey;
-      border-radius: 50px 50px 0 0;
-      transform: rotate(-45deg);
-      transform-origin: 0 100%;
-  }
-  #heart:after {
-      left: 0;
-      transform: rotate(45deg);
-      transform-origin :100% 100%;
-  }
+html, body, input, textarea, select, button {   
+  color: $high-emph !important;
+  background-color: $dark-grey !important;
+}
+
+a {
+    color: rgb(0, 0, 0) !important;
+}
+
+a:hover {
+    color:$high-emph !important;
+}
+
+.site-title, .site-title:visited, .site-nav, .page-link {
+    color: $high-emph !important;
+}
+
+.site-nav {
+    background-color: $dark-grey;
+    border-color: $overlay-light;
+}
+
+* {
+    scrollbar-color: $dark-grey $overlay-light;
+}
+
+pre, code {
+    // BVas a lighter colour to better highlight short code words
+    border-color: $overlay-light;
+    background-color: $overlay;
+}
+
+.page-description {
+    color: $med-emph;
+}
+
+.post-meta {
+    color: $low-emph;
+}
+
+.post-content p, .post-content li {
+    color: $med-emph;
+}
+
+.btn {
+    background-color: $overlay !important;
+    color: $high-emph !important;
+    border-color: $overlay-light !important;
+}
+
+.btn:hover {
+    background-color: $dark-grey !important;
+}
+
+table th{
+    background-color: $overlay;
+    border-color: $overlay-light;
+    color: $high-emph;
+}
+
+table td{
+    background-color: $dark-grey;
+    border-color: $overlay-light;
+    color: $med-emph;
+}
+
+.flash {
+    color: $dark-grey !important;
+    filter: brightness(80%);
+}
+
+canvas {
+    filter: invert(100%);
+}
+
+.post-list > li > div {
+    box-shadow: none !important;
+    background-color: $overlay;
+    border: none !important;
+}
+
+li .post-meta-description {
+    color: $med-emph !important;
+}
