@@ -6,16 +6,18 @@ body
 }
 a
 {
+    content: '' ; 
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 75px;
-    background: #fff;
-    border-radius: 75px;
-    color: #ece4d8;
+    top: 0; 
+    left: 0;
+    background: #FFFFFF;
+    width: 50%;  
+    height: 100%; 
     transition: 0.5s; 
+    z-index: -1;
+    transform: translateX(-200px) rotate(-325deg);
+    opacity: 0; 
+    visibility: hidden;
 }
 
 a.active
