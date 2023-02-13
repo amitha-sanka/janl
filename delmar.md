@@ -1,117 +1,146 @@
-<!DOCTYPE html>
-<html>
-<style>
-.filterDiv {
-  float: left;
-  background-color: #2196F3;
-  color: #ffffff;
-  width: 100px;
-  line-height: 100px;
-  text-align: center;
-  margin: 2px;
-  display: none;
-}
+## Del Mar
 
-.show {
-  display: block;
-}
+<!-- HTML table fragment for page -->
+<table>
+  <thead>
+  <tr>
+    <th>Joke</th>
+    <th>HaHa</th>
+    <th>Boohoo</th>
+  </tr>
+  </thead>
+  <tbody id="result">
+    <!-- javascript generated data -->
+  </tbody>
+</table>
 
-.container {
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-/* Style the buttons */
-.btn {
-  border: none;
-  outline: none;
-  padding: 12px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
-
-.btn:hover {
-  background-color: #ddd;
-}
-
-.btn.active {
-  background-color: #666;
-  color: white;
-}
-</style>
-<body>
-
-<h2>Filter DIV Elements</h2>
-
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('one')"> 1 Star</button>
-  <button class="btn" onclick="filterSelection('two')"> 2 Stars</button>
-  <button class="btn" onclick="filterSelection('three')"> 3 Stars</button>
-  <button class="btn" onclick="filterSelection('four')"> 4 Stars</button>
-  <button class="btn" onclick="filterSelection('five')"> 5 Stars</button>
-</div>
-
-<div class="container">
-  <div class="filterDiv one">BMW</div>
-  <div class="filterDiv four three">Orange</div>
-  <div class="filterDiv one">Volvo</div>
-  <div class="filterDiv five">Red</div>
-  <div class="filterDiv one two">Mustang</div>
-  <div class="filterDiv four">Blue</div>
-  <div class="filterDiv two">Cat</div>
-  <div class="filterDiv two">Dog</div>
-  <div class="filterDiv five">Melon</div>
-  <div class="filterDiv three two">Kiwi</div>
-  <div class="filterDiv five">Banana</div>
-  <div class="filterDiv five">Lemon</div>
-  <div class="filterDiv two">Cow</div>
-</div>
-
+<!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
 <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
 
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
+  // prepare HTML defined "result" container for new output
+  const resultContainer = document.getElementById("result");
 
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
+  // keys for joke reactions
+  const HAHA = "haha";
+  const BOOHOO = "boohoo";
 
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+  // prepare fetch urls
+  const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
+  const like_url = url + "/like/";  // haha reaction
+  const jeer_url = url + "/jeer/";  // boohoo reaction
+
+  // prepare fetch GET options
+  const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
+  // prepare fetch PUT options, clones with JS Spread Operator (...)
+  const put_options = {...options, method: 'PUT'}; // clones and replaces method
+
+  // fetch the API
+  fetch(url, options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          error('GET API response failure: ' + response.status);
+          return;
+      }
+      // valid response will have JSON data
+      response.json().then(data => {
+          console.log(data);
+          for (const row of data) {
+            // make "tr element" for each "row of data"
+            const tr = document.createElement("tr");
+            
+            // td for joke cell
+            const joke = document.createElement("td");
+              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
+
+            // td for haha cell with onclick actions
+            const haha = document.createElement("td");
+              const haha_but = document.createElement('button');
+              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
+              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
+              haha_but.onclick = function () {
+                // onclick function call with "like parameters"
+                reaction(HAHA, like_url+row.id, haha_but.id);  
+              };
+              haha.appendChild(haha_but);  // add "haha button" to haha cell
+
+            // td for boohoo cell with onclick actions
+            const boohoo = document.createElement("td");
+              const boohoo_but = document.createElement('button');
+              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
+              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
+              boohoo_but.onclick = function () {
+                // onclick function call with "jeer parameters"
+                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
+              };
+              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
+             
+            // this builds ALL td's (cells) into tr (row) element
+            tr.appendChild(joke);
+            tr.appendChild(haha);
+            tr.appendChild(boohoo);
+
+            // this adds all the tr (row) work above to the HTML "result" container
+            resultContainer.appendChild(tr);
+          }
+      })
+  })
+  // catch fetch errors (ie Nginx ACCESS to server blocked)
+  .catch(err => {
+    error(err + " " + url);
   });
-}
-</script>
 
-</body>
-</html>
+  // Reaction function to likes or jeers user actions
+  function reaction(type, put_url, elemID) {
+
+    // fetch the API
+    fetch(put_url, put_options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          error("PUT API response failure: " + response.status)
+          return;  // api failure
+      }
+      // valid response will have JSON data
+      response.json().then(data => {
+          console.log(data);
+          // Likes or Jeers updated/incremented
+          if (type === HAHA) // like data element
+            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
+          else if (type === BOOHOO) // jeer data element
+            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
+          else
+            error("unknown type: " + type);  // should never occur
+      })
+    })
+    // catch fetch errors (ie Nginx ACCESS to server blocked)
+    .catch(err => {
+      error(err + " " + put_url);
+    });
+    
+  }
+
+  // Something went wrong with actions or responses
+  function error(err) {
+    // log as Error in console
+    console.error(err);
+    // append error to resultContainer
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerHTML = err;
+    tr.appendChild(td);
+    resultContainer.appendChild(tr);
+  }
+
+</script>
