@@ -1,68 +1,175 @@
 ## Del Mar
 
-/*
+<p>Database API</p>
+
 <table>
   <thead>
   <tr>
+    <th>User ID</th>
     <th>Name</th>
-    <th>ID</th>
-    <th>Actions</th>
+    <th>Posts</th>
+    <th>DOB</th>
+    <th>Age</th>
   </tr>
   </thead>
-  <tbody id="table">
+  <tbody id="result">
     <!-- javascript generated data -->
   </tbody>
 </table>
-*/
 
-// Static json, this can be used to test data prior to API and Model being ready
-const json = '[{"_name": "Thomas Edison", "_uid": "toby"}, {"_name": "Nicholas Tesla", "_uid": "nick"}, {"_name": "John Mortensen", "_uid": "jm1021"}, {"_name": "Eli Whitney", "_uid": "eli"}, {"_name": "Hedy Lemarr", "_uid": "hedy"}]';
+<p>Create API</p>
 
-// Convert JSON string to JSON object
-const data = JSON.parse(json);
+<form action="javascript:create_user()">
+    <p><label>
+        User ID:
+        <input type="text" name="uid" id="uid" required="" />
+    </label></p>
+    <p><label>
+        Name:
+        <input type="text" name="name" id="name" required="" />
+    </label></p>
+    <p><label>
+        Password:
+        <input type="password" name="password" id="password" required="" />
+        Verify Password:
+        <input type="password" name="passwordV" id="passwordV" required="" />
+    </label></p>
+    <p><label>
+        Birthday:
+        <input type="date" name="dob" id="dob" />
+    </label></p>
+    <p>
+        <button>Create</button>
+    </p>
+</form>
 
-// prepare HTML result container for new output
-const table = document.getElementById("table");
-data.forEach(user => {
-    // build a row for each user
+<script>
+  // prepare HTML result container for new output
+  const resultContainer = document.getElementById("result");
+  // prepare URL's to allow easy switch from deployment and localhost
+  //const url = "http://localhost:8086/api/users"
+  const url = "https://flask.nighthawkcodingsociety.com/api/users"
+  const create_fetch = url + '/create';
+  const read_fetch = url + '/';
+
+  // Load users on page entry
+  read_users();
+
+
+  // Display User Table, data is fetched from Backend Database
+  function read_users() {
+    // prepare fetch options
+    const read_options = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'omit', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    };
+
+    // fetch the data from API
+    fetch(read_fetch, read_options)
+      // response is a RESTful "promise" on any successful fetch
+      .then(response => {
+        // check for response errors
+        if (response.status !== 200) {
+            const errorMsg = 'Database read error: ' + response.status;
+            console.log(errorMsg);
+            const tr = document.createElement("tr");
+            const td = document.createElement("td");
+            td.innerHTML = errorMsg;
+            tr.appendChild(td);
+            resultContainer.appendChild(tr);
+            return;
+        }
+        // valid response will have json data
+        response.json().then(data => {
+            console.log(data);
+            for (let row in data) {
+              console.log(data[row]);
+              add_row(data[row]);
+            }
+        })
+    })
+    // catch fetch errors (ie ACCESS to server blocked)
+    .catch(err => {
+      console.error(err);
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.innerHTML = err;
+      tr.appendChild(td);
+      resultContainer.appendChild(tr);
+    });
+  }
+
+  function create_user(){
+    //Validate Password (must be 6-20 characters in len)
+    //verifyPassword("click");
+    const body = {
+        uid: document.getElementById("uid").value,
+        name: document.getElementById("name").value,
+        password: document.getElementById("password").value,
+        dob: document.getElementById("dob").value
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+            //add a table row for the new/created userid
+            add_row(data);
+        })
+    })
+  }
+
+  function add_row(data) {
     const tr = document.createElement("tr");
-
-    // td's to build out each column of data
+    const uid = document.createElement("td");
     const name = document.createElement("td");
-    const id = document.createElement("td");
-    const action = document.createElement("td");
-           
-    // add content from user data          
-    name.innerHTML = user._name; 
-    id.innerHTML = user._uid; 
+    const posts = document.createElement("td")
+    const dob = document.createElement("td");
+    const age = document.createElement("td");
+  
 
-    // add action for update button
-    var updateBtn = document.createElement('input');
-    updateBtn.type = "button";
-    updateBtn.className = "button";
-    updateBtn.value = "Update";
-    updateBtn.style = "margin-right:16px";
-    updateBtn.onclick = function () {
-      alert("Update: " + user._uid);
-    };
-    action.appendChild(updateBtn);
+    // obtain data that is specific to the API
+    uid.innerHTML = data.uid; 
+    name.innerHTML = data.name; 
+    posts.innerHTML = data.posts.length;
+    dob.innerHTML = data.dob; 
+    age.innerHTML = data.age; 
 
-    // add action for delete button
-    var deleteBtn = document.createElement('input');
-    deleteBtn.type = "button";
-    deleteBtn.className = "button";
-    deleteBtn.value = "Delete";
-    deleteBtn.style = "margin-right:16px"
-    deleteBtn.onclick = function () {
-      alert("Delete: " + user._uid);
-    };
-    action.appendChild(deleteBtn);  
-
-    // add data to row
+    // add HTML to container
+    tr.appendChild(uid);
     tr.appendChild(name);
-    tr.appendChild(id);
-    tr.appendChild(action);
+    tr.appendChild(posts);
+    tr.appendChild(dob);
+    tr.appendChild(age);
 
-    // add row to table
-    table.appendChild(tr);
-});
+    resultContainer.appendChild(tr);
+  }
+
+</script>
