@@ -6,14 +6,16 @@ body
 }
 a
 {
-    position: static;
+    position: absolute;
     top: 50%;
     left: 20%;
     transform: translate(-50%, -50%);
     width: 200px;
     height: 75px;
+    text-align: center;
     background: #fff;
     border-radius: 75px;
+    text-align: center;
     color: #ece4d8;
     transition: 0.5s; 
 }
@@ -26,12 +28,13 @@ a.active
 a:before
 {
     content: '' ; 
-    position: static;
+    position: absolute;
     top: 0; 
     left: 0;
     background: #ff0047;
     width: 50%;  
     height: 100%; 
+    text-align: center;
     transition: 0.5s; 
     z-index: -1;
     transform: translateX(-200px) rotate(-325deg);
@@ -52,7 +55,7 @@ a.active:before
 a:after 
 {
     content: '' ; 
-    position: static;
+    position: absolute;
     top: 0; 
     right: 0;
     background: #ff0047;
