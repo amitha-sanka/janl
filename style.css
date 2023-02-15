@@ -12,6 +12,7 @@ a
     transform: translate(-50%, -50%);
     width: 200px;
     height: 75px;
+    text-align: center;
     background: #fff;
     border-radius: 75px;
     color: #ece4d8;
@@ -30,6 +31,7 @@ a:before
     top: 0; 
     left: 0;
     background: #ff0047;
+    text-align: center;
     width: 50%;  
     height: 100%; 
     transition: 0.5s; 
@@ -56,6 +58,7 @@ a:after
     top: 0; 
     right: 0;
     background: #ff0047;
+    text-align: center;
     width: 50%;  
     height: 100%; 
     transition: 0.5s; 
