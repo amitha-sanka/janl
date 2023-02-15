@@ -21,4 +21,11 @@
 <h1 id="budget"><u>Choose a Budget</u></h1>
 <h1 id="duration"><u>Choose the Duration</u></h1>
 
-
+<script>
+    // URL for deployment
+    var url = "https://amitha-sanka.github.io/janl/"
+    // Comment out next line for local testing
+    //url = "http://localhost:8731"
+    // Authenticate endpoint
+    const activities_url = url + '/api/activities';
+</script>
