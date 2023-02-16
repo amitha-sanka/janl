@@ -7,8 +7,5 @@
 <title>Background Slideshow</title>
 <link rel="stylesheet" type="text/css" href="homephotos.css">
 </head>
-<body>
-    <a href="#">Like</a>
-</body>
 </html>
 
