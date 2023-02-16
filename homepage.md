@@ -5,8 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Background Slideshow</title>
-        <link rel="stylesheet" href="homephotos.css">
+    <link rel="stylesheet" href="homephotos.css">
 </head>
+
 <body>
 
 <div id="SLIDE_BG"></div>
