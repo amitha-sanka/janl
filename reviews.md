@@ -62,7 +62,7 @@
   <div id="myDropdown" class="dropdown-content">
     <p><a href="seaworld.html">Seaworld</a></p>
     <p><a href="balboapark.html">Balboa Park</a></p>
-    <p><a href="delmar.html">Del Sur</a></p>
+    <p><a href="delmar.html">Del Mar</a></p>
   </div>
 </div>
 

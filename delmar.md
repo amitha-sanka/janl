@@ -1,6 +1,6 @@
 ## Del Mar
 
-<p>Database API</p>
+<p>Del Mar</p>
 
 <table>
   <thead>
@@ -17,7 +17,7 @@
   </tbody>
 </table>
 
-<p>Create API</p>
+<p>Write a Review</p>
 
 <form action="javascript:create_seaworld()">
     <p><label>
