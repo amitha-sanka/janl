@@ -19,24 +19,22 @@
 
 <p>Create API</p>
 
-<form action="javascript:create_user()">
-    <p><label>
-        User ID:
-        <input type="text" name="uid" id="uid" required="" />
-    </label></p>
+<form action="javascript:create_seaworld()">
     <p><label>
         Name:
         <input type="text" name="name" id="name" required="" />
     </label></p>
     <p><label>
-        Password:
-        <input type="password" name="password" id="password" required="" />
-        Verify Password:
-        <input type="password" name="passwordV" id="passwordV" required="" />
+        Rating:
+        <input type="text" name="rating" id="rating" required="" />
     </label></p>
     <p><label>
-        Birthday:
-        <input type="date" name="dob" id="dob" />
+        Review:
+        <input type="text" name="review" id="review" required="" />
+    </label></p>
+    <p><label>
+        Recommend:
+        <input type="text" name="recommend" id="recommen" required="" />
     </label></p>
     <p>
         <button>Create</button>
@@ -48,16 +46,16 @@
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
   //const url = "http://localhost:8086/api/users"
-  const url = "https://flask.nighthawkcodingsociety.com/api/users"
+  const url = "https://sdc.nighthawkcodingsociety.com/api/seaworld"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
 
   // Load users on page entry
-  read_users();
+  read_seaworld();
 
 
   // Display User Table, data is fetched from Backend Database
-  function read_users() {
+  function read_seaworld() {
     // prepare fetch options
     const read_options = {
       method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -104,11 +102,11 @@
     });
   }
 
-  function create_user(){
+  function create_seaworld(){
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
-        uid: document.getElementById("uid").value,
+        name: document.getElementById("name").value,
         name: document.getElementById("name").value,
         password: document.getElementById("password").value,
         dob: document.getElementById("dob").value
@@ -148,26 +146,23 @@
 
   function add_row(data) {
     const tr = document.createElement("tr");
-    const uid = document.createElement("td");
     const name = document.createElement("td");
-    const posts = document.createElement("td")
-    const dob = document.createElement("td");
-    const age = document.createElement("td");
+    const rating = document.createElement("td")
+    const review = document.createElement("td");
+    const recommend = document.createElement("td");
   
 
     // obtain data that is specific to the API
-    uid.innerHTML = data.uid; 
     name.innerHTML = data.name; 
-    posts.innerHTML = data.posts.length;
-    dob.innerHTML = data.dob; 
-    age.innerHTML = data.age; 
+    rating.innerHTML = data.rating.length;
+    review.innerHTML = data.review; 
+    recommend.innerHTML = data.recommend; 
 
     // add HTML to container
-    tr.appendChild(uid);
     tr.appendChild(name);
-    tr.appendChild(posts);
-    tr.appendChild(dob);
-    tr.appendChild(age);
+    tr.appendChild(rating);
+    tr.appendChild(review);
+    tr.appendChild(recommend);
 
     resultContainer.appendChild(tr);
   }
