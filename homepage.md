@@ -3,7 +3,7 @@
 
 <html>
 <head>
-<meta> charset="UTF-8">
+<meta charset="UTF-8">
 <title>Background Slideshow</title>
         <link rel="stylesheet" href="homephotos.css">
 </head>
