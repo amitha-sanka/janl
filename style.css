@@ -13,7 +13,7 @@ a
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 200px;
+    width: 100px;
     height: 75px;
     text-align: center;
     background: #fff;
@@ -39,8 +39,8 @@ a:before
     left: 0;
     background: #ff0047;
     text-align: center;
-    width: 50%;  
-    height: 100%; 
+    width: 25%;  
+    height: 50%; 
     transition: 0.5s; 
     z-index: -1;
     transform: translateX(-200px) rotate(-325deg);
@@ -66,8 +66,8 @@ a:after
     right: 0;
     background: #ff0047;
     text-align: center;
-    width: 50%;  
-    height: 100%; 
+    width: 25%;  
+    height: 50%; 
     transition: 0.5s; 
     z-index: -1;
     transform: translateX(200px) rotate(325deg);
