@@ -14,7 +14,7 @@
 
 .hobbies {
   position: fixed;
-  right: 200px;
+  right: 400px;
   top: 10px;
 }
 
