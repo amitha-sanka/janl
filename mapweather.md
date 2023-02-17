@@ -92,7 +92,9 @@ week: 21
                 // Weather Data
                 document.getElementById("name").innerHTML = data.location.name;
                 document.getElementById("region").innerHTML = data.location.region;
-                document.getElementById("country").innerHTML = data.location.country;                
+                document.getElementById("country").innerHTML = data.location.country;          
+                document.getElementById("lat").innerHTML = data.location.lat;
+                document.getElementById("lon").innerHTML = data.location.lon;      
                 document.getElementById("tz_id").innerHTML = data.location.tz_id;
                 document.getElementById("localtime_epoch").innerHTML = data.location.localtime_epoch;
                 document.getElementById("localtime").innerHTML = data.location.localtime;
@@ -218,7 +220,7 @@ If you choose a city, it will list out the weather forecast and location details
 <div id="astronomybutton">
 
 <br>
-<label for="city">Enter city name:</label>
+<label for="city">Enter city name and "California":</label>
 <input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Details" onclick="cityButtonClick(document.getElementById('city').value)">
 <br><br>
 
@@ -242,18 +244,22 @@ th, td {
 </style>
   <thead><u>Location Details</u>
   <tr>
-    <th style="color:#00008B;">City</th>
-    <th style="color:#00008B;">Region</th>
-    <th style="color:#00008B;">Country</th>
-    <th style="color:#00008B;">Time Zone</th>
-    <th style="color:#00008B;">Local Time Epoch</th>
-    <th style="color:#00008B;">Local Date and Time</th>
+    <th style="color:#1D3557;">City</th>
+    <th style="color:#1D3557;">Region</th>
+    <th style="color:#1D3557;">Country</th>
+    <th style="color:#1D3557;">Latitude</th>
+    <th style="color:#1D3557;">Longitude</th>
+    <th style="color:#1D3557;">Time Zone</th>
+    <th style="color:#1D3557;">Local Time Epoch</th>
+    <th style="color:#1D3557;">Local Date and Time</th>
   </tr>
   </thead>
   <tbody>
     <td id="name"></td>
     <td id="region"></td>
     <td id="country"></td>
+    <td id="lat"></td>
+    <td id="lon"></td>
     <td id="tz_id"></td>
     <td id="localtime_epoch"></td>
     <td id="localtime"></td>
@@ -337,6 +343,8 @@ th, td {
 </table>    
 
 <script>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13383.449908203216!2d-117.11469799999999!3d33.007401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1676596578110!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
 

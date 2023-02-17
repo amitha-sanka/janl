@@ -1,52 +1,67 @@
-## Home
-> Sleeps 48 people. Verify your housing assignment at the reunion with Jeremiah and Melissa in case there are last minute changes.
- 
-> Preview [Homes](https://www.coramranch.com/vacation-home)
-- River House
-- Dogwood House
-- Alpine and Birch House
-- Cedar House
-- Rec Room
+**San Diego County, officially the County of San Diego, is a county in the southwestern corner of the U.S. state of California. San Diego is home to 3,298,634, making it California's second-most populous county and the fifth-most populous in the United States of America. The County provides a wide range of health, public safety, and community services to residents of the region's 18 cities and a large unincorporated area. San Diego County consists of several modern neighborhoods and communities. It is home to several beaches some popular beaches include La Jolla, Windansea, and Del Mar.** 
 
-## Cooking
-> On site there are cooking facilities in each house. The Alpine ranch kitchens will be for large group meals and has appliances and utensils. There is an outdoor barbecue!
+<style>
+
+@charset "UTF-8";
 
 
-## Housing Assignment
+#SLIDE_BG {
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    backface-visibility: hidden;
+    animation: slideBg 20s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+    background-image: url('/lajolla.jpg');
+}
 
-| Family | Attending | Assignment | Count | Children | Arrive | Depart
-| --- | --- | --- | --- | --- | --- | --- |
-| Frank, Judith | Yes | Dogwood Primary | 2 | None | Mon | Sat |
-| | | | | |
-| Johnner, Lora | Yes | ? | 3 | Shay (14) | Mon | Sat |
-| Trent, Yuri | Yes | ? | 5 | Amelia (8), Cruz (6), Gavi (1) | Mon | Sat |
-| Corey | Yes | ? | 1 | - | Mon | Fri |
-| Tiernan | Yes | ? | 1 | - | Mon | Sat |
-| Claire | Yes | ? | 1 | - | Mon | Sat |
-| | | | | |
-|Lisa-Anne, Chris | Yes | ? | 1+ | None | Mon | Sat |
-|Brianna, Forest | Yes | ? | 6 | Sayla (6), Tundra (4), Alora (2), Keelynn (1) | Mon | Sat |
-|Kira, Spencer | Yes | ? | 5 | Georgianna (6), James (5), Arabella (2), Henry (NB) | Mon | Sat |
-|Ethan, Layne | Yes | ? | 6 | William (6), Lily (4), Adeline (2), Eleanor (1) | Mon | Sat |
-| Jarom | Yes | ? | 1 | None | Mon | Sat |
-| Braden | Yes | ? | 1 | None | Mon | Sat |
-| | | | | |
-| Mathew | ? | ? | 1 | None | Unk | Unk |
-| | | | | |
-| Sherri, Drumond | Yes | ? | 2 | None | Mon | Sat |
-| Taylor | Yes | ? | 1 | None | Unk | Unk |
-| Jake | Yes | ? | 1 | None | Unk | Unk |
-| | | | | |
-| Angela, Tye | Yes | ? | 2 | None | Mon | Sat |
-| Bryce | ? | ? | 1 | None | Unk | Unk |
-| Aspen, Brandon | ? | ? | 2 | None | Unk | Unk |
-| Calem | ? | ? | 1 | None | Unk | Unk |
-| | | | | |
-| Jared, Janice | Yes | ? | 4 | Kelle (15), Naya (13) | Mon | Sat |
-| | | | | |
-| John, Melanie | Yes | ? | 4 | Connor (17), Sophia (14) | Mon | Sat |
-| Isaiah | ? | ? | 1 | None | Unk | Unk |
-| | | | | |
-| Jeremiah, Melissa | Yes | ? | 3 | Liam (11) | Mon | Sat |
-| Annalyce | ? | ? | 1 | None | Unk | Unk |
-| Peyton | Yes | ? | 1 | None | Unk | Unk |
+@keyframes slideBg {
+    0% {
+        background-image: url('/lajolla.jpg'); 
+
+    }
+    10% {
+        background-image: url('/balboapark.jpg'); 
+
+    }
+    20% {
+        background-image: url('/padrespark.jpg'); 
+
+    }
+    30% {
+        background-image: url('/pier.jpg'); 
+
+    }
+    40% {
+        background-image: url('/belmont.jpeg');
+    }
+    50% {
+        background-image: url('/airandspace.jpeg');
+    }
+    60% {
+        background-image: url('/cliffs.jpeg');
+    }
+    70% {
+        background-image: url('/seaport.jpeg');
+    }
+    80% {
+        background-image: url('/gaslampquarter.jpg'); 
+
+    }
+    90% {
+        background-image: url('/italy.jpeg');
+    }
+    100% {
+        background-image: url('/sdzoo.jpeg');
+    }
+}
+
+</style>
+
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+</html>

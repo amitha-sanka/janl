@@ -15,6 +15,7 @@ $overlay : #efe7de;
 >>>>>>> ba6a837 (bannerremoval)
 $overlay-light: mix($dark-grey, white, 86%);
 
+<<<<<<< HEAD
 html, body, input, textarea, select, button {   
   color: $high-emph !important;
   background-color: $dark-grey !important;
@@ -99,3 +100,79 @@ canvas {
 li .post-meta-description {
     color: $med-emph !important;
 }
+=======
+  $high-emph: #1D3557; //names
+  $low-emph: #3A99FF;
+  $dark-grey : #A8DADC; 
+  $overlay : #94dbd7;
+  $overlay-light: mix($dark-grey, white, 86%);
+
+  html, body, input, textarea, select, button {
+    color: $high-emph !important;
+    background-color: $dark-grey !important;
+  }
+  a {
+      color: rgb(0, 0, 0) !important;
+  }
+  a:hover {
+      color:$high-emph !important;
+  }
+  .site-title, .site-title:visited, .site-nav, .page-link {
+      color: $high-emph !important;
+  }
+  .site-nav {
+      background-color: $dark-grey;
+      border-color: black;
+  }
+  * {
+      scrollbar-color: $dark-grey $overlay-light;
+  }
+  pre, code {
+      // BVas a lighter colour to better highlight short code words
+      border-color: black;
+      background-color: $overlay;
+  }
+  .page-description {
+      color: $high-emph;
+  }
+  .post-meta {
+      color: $low-emph;
+  }
+  .post-content p, .post-content li {
+      color: $high-emph;
+  }
+  .btn {
+      background-color: $overlay !important;
+      color: $high-emph !important;
+      border-color: black !important;
+  }
+  .btn:hover {
+      background-color: $dark-grey !important;
+  }
+  table th{
+      background-color: $overlay;
+      border-color: black;
+      color: $high-emph;
+  }
+  table td{
+      background-color: $dark-grey;
+      border-color: black;
+      color: $high-emph;
+  }
+  .flash {
+      color: $dark-grey !important;
+      filter: brightness(80%);
+  }
+  canvas {
+      filter: invert(100%);
+  }
+  .post-list > li > div {
+      box-shadow: none !important;
+      background-color: $overlay;
+      border: none !important;
+  }
+  li .post-meta-description {
+      color: $high-emph !important;
+  }
+
+>>>>>>> e1f5d62 (api)
