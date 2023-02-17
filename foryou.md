@@ -33,11 +33,11 @@
 }
 
 .budget {
-
+  position: relative;
 }
 
 .duration {
-
+  position: relative;
 }
 
 </style>
