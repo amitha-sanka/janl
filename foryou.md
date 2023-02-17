@@ -49,19 +49,19 @@
 <h1 id="durations"><u>Choose the Duration</u></h1>
 
 <div class="hobby">
-  <button onclick="myFunction()" class="dropbtn">Activity</button>
+  <button onclick="myFunction()" class="dropbtn">Hobby</button>
   <div id="myDropdown" class="dropdown-content">
   </div>
 </div>
 
 <div class="budget">
-  <button onclick="myFunction()" class="dropbtn">Activity</button>
+  <button onclick="myFunction()" class="dropbtn">Price Range</button>
   <div id="myDropdown" class="dropdown-content">
   </div>
 </div>
 
 <div class="duration">
-  <button onclick="myFunction()" class="dropbtn">Activity</button>
+  <button onclick="myFunction()" class="dropbtn">Duration of Activity</button>
   <div id="myDropdown" class="dropdown-content">
   </div>
 </div>
