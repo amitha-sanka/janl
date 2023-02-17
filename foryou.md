@@ -68,10 +68,24 @@
 </div>
 
 <script>
-    // URL for deployment
-    var url = "https://amitha-sanka.github.io/janl/"
-    // Comment out next line for local testing
-    //url = "http://localhost:8731"
-    // Authenticate endpoint
-    const activities_url = url + '/api/activities';
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
 </script>
