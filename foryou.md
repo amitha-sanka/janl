@@ -48,7 +48,7 @@
 <div class="hobby">
   <button onclick="myFunction()" class="dropbtn">Hobby</button>
   <div id="myDropdown" class="dropdown-content">
-  <p><a href="seaworld.html">Seaworld</a></p>
+   <p>Hello World!</p>
   </div>
 </div>
 
