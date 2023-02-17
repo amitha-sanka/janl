@@ -48,7 +48,7 @@
 <div class="hobby">
   <button onclick="myFunction()" class="dropbtn">Hobby</button>
   <div id="myDropdown" class="dropdown-content">
-   <p><a href="#">Link 1</a>Amusement Park</p>
+   <p><a href="#">Amusement Park</a></p>
   </div>
 </div>
 
