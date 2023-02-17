@@ -12,14 +12,41 @@
   padding: 5px;
 }
 
+.hobbies {
+  position: relative;
+  right: 100px;
+  top: 10px;
+}
+
+.budgets {
+  position: relative;
+  right: 300px;
+}
+
+.durations {
+  position: relative;
+  right: 700px;
+}
+
+.hobby {
+  position: relative;
+}
+
+.budget {
+
+}
+
+.duration {
+
+}
 
 </style>
 
 
 
 <h1 id="hobbies"><u>Choose a Hobby</u></h1>
-<h1 id="budget"><u>Choose a Budget</u></h1>
-<h1 id="duration"><u>Choose the Duration</u></h1>
+<h1 id="budgets"><u>Choose a Budget</u></h1>
+<h1 id="durations"><u>Choose the Duration</u></h1>
 
 <div class="hobby">
   <button onclick="myFunction()" class="dropbtn">Activity</button>
