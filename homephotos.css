@@ -8,7 +8,7 @@
     background-size: cover; 
     background-repeat: no-repeat; 
     backface-visibility: hidden;
-    animation: slideBg 8s linear infinite 0s;
+    animation: slideBg 20s linear infinite 0s;
     animation-timing-function: ease-in-out;
     background-image: url('/lajolla.jpg');
 }
@@ -18,21 +18,39 @@
         background-image: url('/lajolla.jpg'); 
 
     }
-    25% {
+    10% {
         background-image: url('/balboapark.jpg'); 
 
     }
-    50% {
+    20% {
         background-image: url('/padrespark.jpg'); 
 
     }
-    75% {
+    30% {
         background-image: url('/pier.jpg'); 
 
     }
-    100% {
+    40% {
+        background-image: url('/belmont.jpeg');
+    }
+    50% {
+        background-image: url('/airandspace.jpeg');
+    }
+    60% {
+        background-image: url('/cliffs.jpeg');
+    }
+    70% {
+        background-image: url('/seaport.jpeg');
+    }
+    80% {
         background-image: url('/gaslampquarter.jpg'); 
 
+    }
+    90% {
+        background-image: url('/italy.jpeg');
+    }
+    100% {
+        background-image: url('/sdzoo.jpeg');
     }
 }
 
