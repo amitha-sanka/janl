@@ -1,12 +1,14 @@
 ## Balboa Park
 
-<!-- HTML table fragment for page -->
+<p>Balboa Park</p>
+
 <table>
   <thead>
   <tr>
-    <th>Joke</th>
-    <th>HaHa</th>
-    <th>Boohoo</th>
+    <th>Name</th>
+    <th>Rating</th>
+    <th>Review</th>
+    <th>Recommend</th>
   </tr>
   </thead>
   <tbody id="result">
@@ -14,132 +16,153 @@
   </tbody>
 </table>
 
-<!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
+<p>Write a Review</p>
+
+<form action="javascript:create_seaworld()">
+    <p><label>
+        Name:
+        <input type="text" name="name" id="name" required="" />
+    </label></p>
+    <p><label>
+        Rating:
+        <input type="text" name="rating" id="rating" required="" />
+    </label></p>
+    <p><label>
+        Review:
+        <input type="text" name="review" id="review" required="" />
+    </label></p>
+    <p><label>
+        Recommend:
+        <input type="text" name="recommend" id="recommen" required="" />
+    </label></p>
+    <p>
+        <button>Post</button>
+    </p>
+</form>
+
 <script>
-
-  // prepare HTML defined "result" container for new output
+  // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
+  // prepare URL's to allow easy switch from deployment and localhost
+  //const url = "http://localhost:8086/api/users"
+  const url = "https://sdc.nighthawkcodingsociety.com/api/seaworld"
+  const create_fetch = url + '/create';
+  const read_fetch = url + '/';
 
-  // keys for joke reactions
-  const HAHA = "haha";
-  const BOOHOO = "boohoo";
+  // Load users on page entry
+  read_seaworld();
 
-  // prepare fetch urls
-  const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
-  const like_url = url + "/like/";  // haha reaction
-  const jeer_url = url + "/jeer/";  // boohoo reaction
 
-  // prepare fetch GET options
-  const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  };
-  // prepare fetch PUT options, clones with JS Spread Operator (...)
-  const put_options = {...options, method: 'PUT'}; // clones and replaces method
+  // Display User Table, data is fetched from Backend Database
+  function read_seaworld() {
+    // prepare fetch options
+    const read_options = {
+      method: 'GET', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'omit', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    };
 
-  // fetch the API
-  fetch(url, options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors
-      if (response.status !== 200) {
-          error('GET API response failure: ' + response.status);
-          return;
-      }
-      // valid response will have JSON data
-      response.json().then(data => {
-          console.log(data);
-          for (const row of data) {
-            // make "tr element" for each "row of data"
+    // fetch the data from API
+    fetch(read_fetch, read_options)
+      // response is a RESTful "promise" on any successful fetch
+      .then(response => {
+        // check for response errors
+        if (response.status !== 200) {
+            const errorMsg = 'Database read error: ' + response.status;
+            console.log(errorMsg);
             const tr = document.createElement("tr");
-            
-            // td for joke cell
-            const joke = document.createElement("td");
-              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
-
-            // td for haha cell with onclick actions
-            const haha = document.createElement("td");
-              const haha_but = document.createElement('button');
-              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
-              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
-              haha_but.onclick = function () {
-                // onclick function call with "like parameters"
-                reaction(HAHA, like_url+row.id, haha_but.id);  
-              };
-              haha.appendChild(haha_but);  // add "haha button" to haha cell
-
-            // td for boohoo cell with onclick actions
-            const boohoo = document.createElement("td");
-              const boohoo_but = document.createElement('button');
-              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
-              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
-              boohoo_but.onclick = function () {
-                // onclick function call with "jeer parameters"
-                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
-              };
-              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
-             
-            // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(joke);
-            tr.appendChild(haha);
-            tr.appendChild(boohoo);
-
-            // this adds all the tr (row) work above to the HTML "result" container
+            const td = document.createElement("td");
+            td.innerHTML = errorMsg;
+            tr.appendChild(td);
             resultContainer.appendChild(tr);
-          }
-      })
-  })
-  // catch fetch errors (ie Nginx ACCESS to server blocked)
-  .catch(err => {
-    error(err + " " + url);
-  });
-
-  // Reaction function to likes or jeers user actions
-  function reaction(type, put_url, elemID) {
-
-    // fetch the API
-    fetch(put_url, put_options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors
-      if (response.status !== 200) {
-          error("PUT API response failure: " + response.status)
-          return;  // api failure
-      }
-      // valid response will have JSON data
-      response.json().then(data => {
-          console.log(data);
-          // Likes or Jeers updated/incremented
-          if (type === HAHA) // like data element
-            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
-          else if (type === BOOHOO) // jeer data element
-            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
-          else
-            error("unknown type: " + type);  // should never occur
-      })
+            return;
+        }
+        // valid response will have json data
+        response.json().then(data => {
+            console.log(data);
+            for (let row in data) {
+              console.log(data[row]);
+              add_row(data[row]);
+            }
+        })
     })
-    // catch fetch errors (ie Nginx ACCESS to server blocked)
+    // catch fetch errors (ie ACCESS to server blocked)
     .catch(err => {
-      error(err + " " + put_url);
+      console.error(err);
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      td.innerHTML = err;
+      tr.appendChild(td);
+      resultContainer.appendChild(tr);
     });
-    
   }
 
-  // Something went wrong with actions or responses
-  function error(err) {
-    // log as Error in console
-    console.error(err);
-    // append error to resultContainer
+  function create_seaworld(){
+    //Validate Password (must be 6-20 characters in len)
+    //verifyPassword("click");
+    const body = {
+        name: document.getElementById("name").value,
+        name: document.getElementById("name").value,
+        password: document.getElementById("password").value,
+        dob: document.getElementById("dob").value
+    };
+    const requestOptions = {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
+
+    // URL for Create API
+    // Fetch API call to the database to create a new user
+    fetch(create_fetch, requestOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          const errorMsg = 'Database create error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+            //add a table row for the new/created userid
+            add_row(data);
+        })
+    })
+  }
+
+  function add_row(data) {
     const tr = document.createElement("tr");
-    const td = document.createElement("td");
-    td.innerHTML = err;
-    tr.appendChild(td);
+    const name = document.createElement("td");
+    const rating = document.createElement("td")
+    const review = document.createElement("td");
+    const recommend = document.createElement("td");
+  
+
+    // obtain data that is specific to the API
+    name.innerHTML = data.name; 
+    rating.innerHTML = data.rating.length;
+    review.innerHTML = data.review; 
+    recommend.innerHTML = data.recommend; 
+
+    // add HTML to container
+    tr.appendChild(name);
+    tr.appendChild(rating);
+    tr.appendChild(review);
+    tr.appendChild(recommend);
+
     resultContainer.appendChild(tr);
   }
 

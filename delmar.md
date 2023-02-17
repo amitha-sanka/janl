@@ -5,11 +5,10 @@
 <table>
   <thead>
   <tr>
-    <th>User ID</th>
     <th>Name</th>
-    <th>Posts</th>
-    <th>DOB</th>
-    <th>Age</th>
+    <th>Rating</th>
+    <th>Review</th>
+    <th>Recommend</th>
   </tr>
   </thead>
   <tbody id="result">
@@ -37,7 +36,7 @@
         <input type="text" name="recommend" id="recommen" required="" />
     </label></p>
     <p>
-        <button>Create</button>
+        <button>Post</button>
     </p>
 </form>
 
