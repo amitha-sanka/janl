@@ -21,6 +21,24 @@
 <h1 id="budget"><u>Choose a Budget</u></h1>
 <h1 id="duration"><u>Choose the Duration</u></h1>
 
+<div class="hobby">
+  <button onclick="myFunction()" class="dropbtn">Activity</button>
+  <div id="myDropdown" class="dropdown-content">
+  </div>
+</div>
+
+<div class="budget">
+  <button onclick="myFunction()" class="dropbtn">Activity</button>
+  <div id="myDropdown" class="dropdown-content">
+  </div>
+</div>
+
+<div class="duration">
+  <button onclick="myFunction()" class="dropbtn">Activity</button>
+  <div id="myDropdown" class="dropdown-content">
+  </div>
+</div>
+
 <script>
     // URL for deployment
     var url = "https://amitha-sanka.github.io/janl/"
