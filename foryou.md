@@ -13,7 +13,7 @@
 }
 
 .hobbies {
-  position: relative;
+  position: fixed;
   right: 100px;
   top: 10px;
 }
