@@ -12,7 +12,7 @@
     background-size: cover; 
     background-repeat: no-repeat; 
     backface-visibility: hidden;
-    animation: slideBg 20s linear infinite 0s;
+    animation: slideBg 20s linear infinite 0s; 
     animation-timing-function: ease-in-out;
     background-image: url('/lajolla.jpg');
 }
