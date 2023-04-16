@@ -1,7 +1,7 @@
 ---
-title: SD County Account Login
+title: Create Account
 layout: default
-description: A login screen that interacts with Java and obtains a JWT  
+description: A sign up screen that interacts with Java and obtains a JWT  
 permalink: /createaccount.html
 ---
 
@@ -41,17 +41,17 @@ permalink: /createaccount.html
 </form>
 
 <script>
- 
 
     function signup_user(){
-   // URL for deployment
-   var url = "http://sdc.nighthawkcodingsociety.com/"
-    // Comment out next line for local testing
-  // url = "http://192.168.1.20:8731/"
-    // Authenticate endpoint
-    const signup_url = url + '/api/users';
 
-    // Set body to include login data
+        // URL for deployment
+        var url = "http://localhost:8731"
+        // Comment out next line for local testing
+        // url = "http://192.168.1.20:8731/"
+        // Authenticate endpoint
+        const signup_url = url + '/api/users/';
+
+        // Set body to include login data
         const body = {
             uid: document.getElementById("uid").value,
             name: document.getElementById("name").value,
@@ -61,8 +61,7 @@ permalink: /createaccount.html
             dob: document.getElementById("dob").value,
             age: document.getElementById("age").value
         };
-        alert(JSON.stringify(body));
-        alert(signup_url);
+
         // Set Headers to support cross origin
         const requestOptions = {
             method: 'POST',
