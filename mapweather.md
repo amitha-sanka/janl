@@ -6,43 +6,19 @@ type: pbl
 week: 21
 ---
 
-
-
-
-
 <body>
 <br>
 <br>
 
 <h1><strong style="color:black">Weather Forecast</strong></h1>
 
-
-
 <script>
-    // alert('Enter city of destination and click on "Get Location & Weather Forecast"');
 
     function cityButtonClick(city) {
         
-        if (!city.trim()) {
-            alert("Enter a city in San Diego County.");
-            return;
-        }  
 
-//alert("yo momma!:  " + city);
-
-        // prepare HTML result container for new output
-//        const resultContainer = document.getElementById("test");
-
-        //clear contents of astronomy table
-//        resultContainer.innerHTML = "<i>hhhhhh</>";
-
-//alert("1: " + resultContainer);
-
-        // prepare fetch options
         const url = 'https://weatherapi-com.p.rapidapi.com/forecast.json?q=' + city + '&days=3';
 
-//alert(url);
-//alert("2: " + url);
             
         const headers = {
             method: 'GET', // *GET, POST, PUT, DELETE, etc.
@@ -56,24 +32,20 @@ week: 21
             },
         };
 
-//alert("3: " + headers)
-
-//alert("3a: pre-fetch" + headers);
-
         // fetch the API
         fetch(url, headers)
         // response is a RESTful "promise" on any successful fetch
         .then(response => {
             // check for response errors
             if (response.status !== 200) {
-
-                const errorMsg = 'Database response error: ' + response.status;
+                const errorMsg = 'City not found: ' + city ;
                 console.log(errorMsg);
                 const tr = document.createElement("tr");
                 const td = document.createElement("td");
                 td.innerHTML = errorMsg;
                 tr.appendChild(td);
-                resultContainer.appendChild(tr);
+              //  resultContainer.appendChild(tr);
+                document.getElementById("errorMsg").innerHTML = errorMsg;
 
                 return;
             }
@@ -180,10 +152,10 @@ week: 21
             })
         }
 
-    function saveWeather() {
+    function saveCity() {
         
         var url = "http://localhost:8731"
-        const saveWeather_url = url + '/api/users/saveWeather';
+        const saveCity_url = url + '/api/users/city';
 
         const body = {
             uid: document.getElementById("uid").value,
@@ -191,7 +163,7 @@ week: 21
         };
 
         const requestOptions = {
-            method: 'POST',
+            method: 'PUT',
             mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
             // credentials: 'include', // include, *same-origin, omit
@@ -201,12 +173,12 @@ week: 21
             },
         };
 
-        fetch(saveWeather_url, requestOptions)
+        fetch(saveCity_url, requestOptions)
             .then(response => {
                 // trap error response from Web API
                 if (response.status !== 200) {
-                    const message = 'Weather details not saved: ' + document.getElementById("city").value;
-                    document.getElementById("messageWeather").innerHTML = message;
+                    const message = 'City not saved: ' + document.getElementById("city").value;
+                    document.getElementById("messageCity").innerHTML = message;
                     localStorage.removeItem("uid");
                     localStorage.removeItem("city");
                     return;
@@ -214,8 +186,8 @@ week: 21
 
                 // Valid response will contain json data
                 response.json().then(data => {
-                    const message = 'Weather search saved: ' + data.city;
-                    document.getElementById("messageWeather").innerHTML = message;
+                    const message = 'City search saved: ' + data.city;
+                    document.getElementById("messageCity").innerHTML = message;
                     localStorage.setItem("uid", data.uid);
                     localStorage.setItem("city", data.city);
                 })
@@ -224,22 +196,25 @@ week: 21
 
         
 </script>
-
+<style>
+  .red-label {
+    color: red;
+    font-weight: bold;
+  }
+</style>
 If you choose a city, it will list out the weather forecast and location details.
 
 <br>
 
 <br>
-<form>
-<label for="uid">Enter username:</label>
-<input type="text" id="uid" name="uid">&nbsp;&nbsp;<input type="button" value="Enter" onclick="findUid()">&nbsp;&nbsp;<label id="messageLogin"></label>
+<label for="city">Enter city name for weather details:</label>
+<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Details" onclick="cityButtonClick(document.getElementById('city').value)">
+<input type="button" value="Save City" onclick="addCityToList(document.getElementById('city').value)">
+<button onclick="displayCityTable()">Show saved cities</button>
 <br>
-<label for="city">Enter city name and "California":</label>
-<input type="text" id="city" name="city">&nbsp;&nbsp;<input type="button" value="Get Details" onclick="cityButtonClick(document.getElementById('city').value);saveWeather()">&nbsp;&nbsp;<label id="messageWeather"></label>
-</form>
+
+<label id="errorMsg" class="red-label"></label>
 <br><br>
-
-
 <table>
 
 <style>
@@ -357,3 +332,33 @@ th, td {
     </tr>
     </tbody>
 </table>    
+
+
+<br>
+<div id="cityTable"></div>
+
+<script>
+  // Initialize an empty array to store the city names
+  var cities = [];
+
+  function addCityToList(city) {
+    // Add the city name to the cities array
+    cities.push(city);
+    
+    // Clear the input field
+    document.getElementById("city").value = "";
+  }
+
+  function displayCityTable() {
+    // Generate the HTML for the city table
+    var tableHTML = "<table><thead><tr><th>Saved Cities</th></tr></thead><tbody>";
+    for (var i = 0; i < cities.length; i++) {
+      tableHTML += "<tr><td><a href=\"javascript:cityButtonClick('" + cities[i] + "')\">" + cities[i] + "</a></td></tr>";
+    }
+    tableHTML += "</tbody></table>";
+    
+    // Set the HTML of the designated div element to the city table HTML
+    document.getElementById("cityTable").innerHTML = tableHTML;
+  }
+</script>
+
